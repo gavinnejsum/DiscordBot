@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DiscordBot.Bots
+namespace DiscordBot.DAL.Models
 {
-    class Class1
+    public abstract class Entity
     {
+        [Key]
     }
 }

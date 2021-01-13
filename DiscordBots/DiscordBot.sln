@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiscordBot", "DiscordBot.csproj", "{25C1DB8B-9009-4768-8C15-0E9E184B4FD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiscordBot.Bots", "DiscordBot.Bots.csproj", "{25C1DB8B-9009-4768-8C15-0E9E184B4FD6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DiscordBot.Bots", "DiscordBot.Bots", "{C47B80C7-2194-4240-9DB8-1E9B1B7D0689}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DiscordBot.DAL", "DiscordBot.DAL", "{C67B7F9A-1888-4772-864C-19C512A55DFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscordBot.DAL", "DiscordBot.DAL\DiscordBot.DAL.csproj", "{917FF822-A761-411F-B357-9D3838F4EC73}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +21,17 @@ Global
 		{25C1DB8B-9009-4768-8C15-0E9E184B4FD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25C1DB8B-9009-4768-8C15-0E9E184B4FD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25C1DB8B-9009-4768-8C15-0E9E184B4FD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{917FF822-A761-411F-B357-9D3838F4EC73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{917FF822-A761-411F-B357-9D3838F4EC73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{917FF822-A761-411F-B357-9D3838F4EC73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{917FF822-A761-411F-B357-9D3838F4EC73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{25C1DB8B-9009-4768-8C15-0E9E184B4FD6} = {C47B80C7-2194-4240-9DB8-1E9B1B7D0689}
+		{917FF822-A761-411F-B357-9D3838F4EC73} = {C67B7F9A-1888-4772-864C-19C512A55DFC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A9E6E36D-8C91-420D-BCF1-EED17FD6BB88}

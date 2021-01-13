@@ -10,7 +10,7 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DiscordBot
+namespace DiscordBot.Bots
 {
     public class Bot
     {

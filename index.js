@@ -45,12 +45,9 @@ client.on('message',message=>{
     
     var stringArgument = ArrToString.ArgumentToString(args);
     console.log(stringArgument);
-    if(stringArgument == "Hello There") { 
-      console.log(stringArgument);
-    }
     var returnMessage = schedule.getOnlyNextEvent(stringArgument);
     console.log(returnMessage); 
-    message.channel.send(`Command name: ${command}\nArguments: ${"hi"}`);
+    message.channel.send(`Query: ${command+ " "+ stringArgument}\nResponse: ${returnMessage}`);
 
   }
 

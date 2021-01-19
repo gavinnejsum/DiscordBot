@@ -1,0 +1,283 @@
+[
+  {
+    "day": "1",
+    "info": {
+      "time": [
+        "00:00:00",
+        "06:00:00",
+        "12:00:00",
+        "18:00:00"
+      ],
+      "events": [
+        [
+          "Research SLB",
+          "Research SLB",
+          "Officer Recruit - Heroic",
+          "Officer XP SLB"
+        ],
+        [
+          "Officer Recruit ",
+          "Upgrade Station",
+          "Upgrade Station",
+          "Officer Recruit"
+        ]
+      ]
+    }
+  },
+  {
+    "day": "2",
+    "info": {
+      "time": [
+        "00:00:00",
+        "06:00:00",
+        "12:00:00",
+        "18:00:00"
+      ],
+      "events": [
+        [
+          "Upgrade Station Big",
+          "Upgrade Station Big",
+          "Upgrade Ships SLB",
+          "Upgrade Station SLB"
+        ],
+        [
+          "Officer Recruit",
+          "Officer XP",
+          "Officer XP",
+          "Upgrade Station"
+        ]
+      ]
+    }
+  },
+  {
+    "day": "3",
+    "info": {
+      "time": [
+        "00:00:00",
+        "06:00:00",
+        "12:00:00",
+        "18:00:00"
+      ],
+      "events": [
+        [
+          "Upgrade Ships Heroic",
+          "Officer XP Big",
+          "Complete Research Big",
+          "Upgrade Station SLB"
+        ],
+        [
+          "Upgrade Station",
+          "Officer Recruit",
+          "Officer Recruit",
+          "Ship Upgrade"
+        ],
+        [
+          "Complete Research",
+          "Complete Research",
+          "",
+          ""
+        ]
+      ]
+    }
+  },
+  {
+    "day": "4",
+    "info": {
+      "time": [
+        "00:00:00",
+        "06:00:00",
+        "12:00:00",
+        "18:00:00"
+      ],
+      "events": [
+        [
+          "Ship Upgrade - Heroic",
+          "Officer Recruit - Heroic",
+          "Upgrade Station Big",
+          "Officer XP Big"
+        ],
+        [
+          "Ship Upgrade",
+          "",
+          "",
+          "Upgrade Station"
+        ]
+      ]
+    }
+  },
+  {
+    "day": "5",
+    "info": {
+      "time": [
+        "00:00:00",
+        "06:00:00",
+        "12:00:00",
+        "18:00:00"
+      ],
+      "events": [
+        [
+          "Ship Upgrade SLB",
+          "Research SLB",
+          "Upgrade Station Big",
+          "Officer Recruit SLB"
+        ],
+        [
+          "Upgrade Station",
+          "Ship Upgrade - SMS",
+          "Ship Upgrade - SMS",
+          "Upgrade Station"
+        ]
+      ]
+    }
+  },
+  {
+    "day": "6",
+    "info": {
+      "time": [
+        "00:00:00",
+        "06:00:00",
+        "12:00:00",
+        "18:00:00"
+      ],
+      "events": [
+        [
+          "Ship Upgrade - Heroic",
+          "Officer XP SLB",
+          "Officer Recruit - Heroic",
+          "Upgrade Station Big"
+        ],
+        [
+          "Upgrade Station",
+          "Complete Research",
+          "Complete Research",
+          "Complete Research"
+        ]
+      ]
+    }
+  },
+  {
+    "day": "7",
+    "info": {
+      "time": [
+        "00:00:00",
+        "06:00:00",
+        "12:00:00",
+        "18:00:00"
+      ],
+      "events": [
+        [
+          "Ship Upgrade SLB",
+          "Officer XP Spend",
+          "Complete Research Big",
+          "Officer Recruit - Heroic"
+        ],
+        [
+          "Complete Research",
+          "Officer XP Spend",
+          "Officer XP Spend",
+          "Complete Research"
+        ]
+      ]
+    }
+  },
+  {
+    "day": "8",
+    "info": {
+      "time": [
+        "00:00:00",
+        "06:00:00",
+        "12:00:00",
+        "18:00:00"
+      ],
+      "events": [
+        [
+          "Officer XP SLB",
+          "Upgrade Station Big",
+          "Upgrade Station Big",
+          "Upgrade Station - SLB"
+        ],
+        [
+          "Complete Research",
+          "Upgrade Ships",
+          "Upgrade Ships",
+          "Complete Research"
+        ]
+      ]
+    }
+  },
+  {
+    "day": "9",
+    "info": {
+      "time": [
+        "00:00:00",
+        "06:00:00",
+        "12:00:00",
+        "18:00:00"
+      ],
+      "events": [
+        [
+          "Ship Upgrade - Heroic",
+          "Complete Research Big",
+          "Officer XP Big",
+          "Officer XP SLB"
+        ],
+        [
+          "Complete Research",
+          "Officer Recruit",
+          "Officer Recruit",
+          "Complete Research"
+        ]
+      ]
+    }
+  },
+  {
+    "day": "10",
+    "info": {
+      "time": [
+        "00:00:00",
+        "06:00:00",
+        "12:00:00",
+        "18:00:00"
+      ],
+      "events": [
+        [
+          "Complete Research SLB",
+          "Complete Research Big",
+          "Upgrade Ships - Heroic",
+          "Big Complete Research"
+        ],
+        [
+          "Complete Research",
+          "Complete Research",
+          "Complete Research",
+          "Upgrade Station"
+        ]
+      ]
+    }
+  },
+  {
+    "day": "11",
+    "info": {
+      "time": [
+        "00:00:00",
+        "06:00:00",
+        "12:00:00",
+        "18:00:00"
+      ],
+      "events": [
+        [
+          "Upgrade Station - SLB",
+          "Upgrade Ships - Heroic",
+          "Big Points Research",
+          "Upgrade Ships - Heroic"
+        ],
+        [
+          "Upgrade Station",
+          "Officer XP",
+          "Officer XP",
+          "Officer Recruit"
+        ]
+      ]
+    }
+  }
+]

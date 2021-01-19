@@ -1,25 +1,58 @@
 require('dotenv').config();
+var schedule = require('./schedule.js');
+const ArrToString = require('./convertArrayToString.js');
 const Discord = require('discord.js');
-const bot = new Discord.Client();
+const client = new Discord.Client();
+const prefix = '!';
 const TOKEN = process.env.TOKEN;
 
-bot.login(TOKEN);
+client.login(TOKEN);
 
-bot.on('ready', () => {
-  console.info(`Logged in as ${bot.user.tag}!`);
+
+client.once('ready', () => {
+  console.info(`Logged in as ${client.user.tag}!`);
 });
 
-bot.on('message', msg => {
-  if (msg.content === 'ping') {
-    msg.reply('pong');
-    msg.channel.send('pong');
+client.on('message', message => {
+  if (message.content === 'ping') {
 
-  } else if (msg.content.startsWith('!kick')) {
-    if (msg.mentions.users.size) {
-      const taggedUser = msg.mentions.users.first();
-      msg.channel.send(`You wanted to kick: ${taggedUser.username}`);
-    } else {
-      msg.reply('Please tag a valid user!');
-    }
+    message.reply('pong');
+    const embed = new Discord.MessageEmbed()
+    .setTitle('title')
+    .setColor(0xff0000)
+    .setDescription('Hello, this is a slick embed!')
+    .addFields(
+      { name: 'Regular field title', value:'d' },
+      { name: '\u200B', value: '\u200B' },
+      { name: 'Inline field title', value: 'Some value here', inline: true },
+      { name: 'Inline field title', value: 'Some value here', inline: true },
+    );
+    message.channel.send(embed); 
   }
 });
+
+client.on('message',message=>{
+  if(!message.content.startsWith(prefix) || message.author.bot) return;
+
+  const args = message.content.slice(prefix.length).trim().split(/ +/);  
+  const command= args.shift().toLowerCase(); 
+  if(command === 'event') { 
+    if(!args.length) {
+
+      return message.channel.send(`you did not provide any arguments, ${message.author}!`)
+    }
+
+    
+    var stringArgument = ArrToString.ArgumentToString(args);
+    console.log(stringArgument);
+    if(stringArgument == "Hello There") { 
+      console.log(stringArgument);
+    }
+    var returnMessage = schedule.getOnlyNextEvent(stringArgument);
+    console.log(returnMessage); 
+    message.channel.send(`Command name: ${command}\nArguments: ${"hi"}`);
+
+  }
+
+});
+

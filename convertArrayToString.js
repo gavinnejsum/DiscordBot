@@ -1,6 +1,5 @@
 function ArgumentToString(array) { 
     var retString= ""; 
-    console.log(retString.length);
     array.forEach(element => {
         if(retString.length == 0) {
         retString= element;
@@ -9,6 +8,8 @@ function ArgumentToString(array) {
             retString+= " "+element; 
         }
     });
+    retString = retString.toLowerCase();
+    // console.log(retString);
     return retString;
 }
 

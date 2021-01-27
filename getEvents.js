@@ -134,6 +134,7 @@ function getMultipleNextEvent(eventName) {
         }
         // console.log(returnString);
     }
+    
     embed = createEmbeddedMessages.createMultipleNextEventEmbed([eventName, returnString]);
     return embed;
 }

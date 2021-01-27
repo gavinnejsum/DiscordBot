@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const format =require('./convertArrayToString.js');
 //research ++
 //research slb++
 //research big++
@@ -271,6 +272,7 @@ function createDayScheduleEmbed(event) {
     return embed;
 }
 function createMultipleNextEventEmbed(event) {
+    var eventName = format.capitalizeFirstLetter(event[0]);
     const embed = new Discord.MessageEmbed()
     embed.setTitle('Daily Event')
     embed.attachFiles(['./Images/DailyEvents.png', './Images/Elephant.png'])
@@ -279,7 +281,7 @@ function createMultipleNextEventEmbed(event) {
     embed.setDescription('Todays Events')
     embed.setFooter('2Bot - All times  in UTC', 'attachment://Elephant.png')
     embed.addFields(
-        { name: `${event[0]}`, value: `\`\`\`${event[1]}\`\`\``, }
+        { name: `${eventName}`, value: `\`\`\`${event[1]}\`\`\``, }
     );
     return embed;
 }

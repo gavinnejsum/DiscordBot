@@ -15,11 +15,8 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-  if (message.content === 'ping') {
-
-    message.reply('pong');
-    embed = createEmbeddedMessages.createEmbed("ship upgrade heroic");
-    message.channel.send(embed);
+  if (message.content === 'hello') {
+    message.author.send("Hello");
   }
 });
 

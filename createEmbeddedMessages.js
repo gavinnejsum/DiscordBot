@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const format =require('./convertArrayToString.js');
+const format = require('./convertArrayToString.js');
 //research ++
 //research slb++
 //research big++
@@ -24,7 +24,7 @@ function createSingleEventEmbed(event) {
             embed.setThumbnail('attachment://research.png')
             embed.setColor(0x0f53d1)
             embed.setDescription('')
-            embed.setFooter('2Bot', 'attachment://Elephant.png')
+            embed.setFooter('Bot - All times  in UTC', 'attachment://Elephant.png')
             embed.addFields(
                 { name: 'Research', value: 'Conduct **Researches** in your R&D Department to propel your power to the next level.' },
                 { name: '\u200B', value: '\u200B' },
@@ -39,7 +39,7 @@ function createSingleEventEmbed(event) {
             embed.setThumbnail('attachment://researchBig.png')
             embed.setColor(0x0f53d1)
             embed.setDescription('')
-            embed.setFooter('2Bot', 'attachment://Elephant.png')
+            embed.setFooter('Bot', 'attachment://Elephant.png')
             embed.addFields(
                 {
                     name: 'Research SLB', value: 'Conduct **Researches** in your R&D Department to propel your power to the next level.'
@@ -57,7 +57,7 @@ function createSingleEventEmbed(event) {
             embed.setThumbnail('attachment://researchBig.png')
             embed.setColor(0x0f53d1)
             embed.setDescription('')
-            embed.setFooter('2Bot', 'attachment://Elephant.png')
+            embed.setFooter('Bot', 'attachment://Elephant.png')
             embed.addFields(
                 {
                     name: 'Research SLB', value: 'Conduct **Researches** in your R&D Department to propel your power to the next level.'
@@ -74,7 +74,7 @@ function createSingleEventEmbed(event) {
             embed.setThumbnail('attachment://officerRecruit.png')
             embed.setColor(0x0f53d1)
             embed.setDescription('')
-            embed.setFooter('2Bot', 'attachment://Elephant.png')
+            embed.setFooter('Bot', 'attachment://Elephant.png')
             embed.addFields(
                 { name: 'Officer Recruit', value: 'Collect **shards** to promote and increase officers\' combat power.' },
                 { name: '\u200B', value: '\u200B' },
@@ -89,7 +89,7 @@ function createSingleEventEmbed(event) {
             embed.setThumbnail('attachment://officerRecruitHeroic.png')
             embed.setColor(0x0f53d1)
             embed.setDescription('')
-            embed.setFooter('2Bot', 'attachment://Elephant.png')
+            embed.setFooter('Bot', 'attachment://Elephant.png')
             embed.addFields(
                 { name: 'Officer Recruit - Heroic', value: 'Collect **shards** to promote and increase officers\' combat power.\nComplete this challenging Heroic event for grand rewards!' },
                 { name: '\u200B', value: '\u200B' },
@@ -99,12 +99,12 @@ function createSingleEventEmbed(event) {
             );
             return embed;
         case "officer recruit slb":
-            embed.setTitle('Daily Event')
+            embed.setTitle('6h Daily Event')
             embed.attachFiles(['./Images/officerRecruitHeroic.png', './Images/Elephant.png'])
             embed.setThumbnail('attachment://officerRecruitHeroic.png')
             embed.setColor(0x0f53d1)
             embed.setDescription('')
-            embed.setFooter('2Bot', 'attachment://Elephant.png')
+            embed.setFooter('Bot', 'attachment://Elephant.png')
             embed.addFields(
                 { name: 'Officer Recruit - SLB', value: 'Level up your Officers for higher combat power. Score more than the opposition and grab the top prize!' },
                 { name: '\u200B', value: '\u200B' },
@@ -114,12 +114,12 @@ function createSingleEventEmbed(event) {
             );
             return embed;
         case "officer xp":
-            embed.setTitle('Daily Event')
+            embed.setTitle('12h Daily Event')
             embed.attachFiles(['./Images/officerRecruit.png', './Images/Elephant.png'])
             embed.setThumbnail('attachment://officerRecruit.png')
             embed.setColor(0x0f53d1)
             embed.setDescription('')
-            embed.setFooter('2Bot', 'attachment://Elephant.png')
+            embed.setFooter('Bot', 'attachment://Elephant.png')
             embed.addFields(
                 { name: 'Officer XP', value: 'Level up your Officers for higher combat power' },
                 { name: '\u200B', value: '\u200B' },
@@ -129,12 +129,12 @@ function createSingleEventEmbed(event) {
             );
             return embed;
         case "officer xp big":
-            embed.setTitle('Daily Event')
+            embed.setTitle('6h Daily Event')
             embed.attachFiles(['./Images/officerBig.png', './Images/Elephant.png'])
             embed.setThumbnail('attachment://officerBig.png')
             embed.setColor(0x0f53d1)
             embed.setDescription('')
-            embed.setFooter('2Bot', 'attachment://Elephant.png')
+            embed.setFooter('Bot', 'attachment://Elephant.png')
             embed.addFields(
                 { name: 'Officer XP', value: 'Level up your Officers for higher combat power' },
                 { name: '\u200B', value: '\u200B' },
@@ -144,12 +144,12 @@ function createSingleEventEmbed(event) {
             );
             return embed;
         case "officer xp slb":
-            embed.setTitle('Daily Event')
+            embed.setTitle('6h Daily Event')
             embed.attachFiles(['./Images/officerBig.png', './Images/Elephant.png'])
             embed.setThumbnail('attachment://officerBig.png')
             embed.setColor(0x0f53d1)
             embed.setDescription('')
-            embed.setFooter('2Bot', 'attachment://Elephant.png')
+            embed.setFooter('Bot', 'attachment://Elephant.png')
             embed.addFields(
                 { name: 'Officer XP - SLB', value: 'Level up your Officers for higher combat power. Score more than the opposition and grab the top prize!' },
                 { name: '\u200B', value: '\u200B' },
@@ -159,12 +159,12 @@ function createSingleEventEmbed(event) {
             );
             return embed;
         case "ship upgrade":
-            embed.setTitle('Daily Event')
+            embed.setTitle('12h Daily Event')
             embed.attachFiles(['./Images/shipUpgrade.png', './Images/Elephant.png'])
             embed.setThumbnail('attachment://shipUpgrade.png')
             embed.setColor(0x0f53d1)
             embed.setDescription('')
-            embed.setFooter('2Bot', 'attachment://Elephant.png')
+            embed.setFooter('Bot', 'attachment://Elephant.png')
             embed.addFields(
                 { name: 'Ship Upgrade', value: 'Build and Upgrade Modules to strengthen your Station' },
                 { name: '\u200B', value: '\u200B' },
@@ -174,12 +174,12 @@ function createSingleEventEmbed(event) {
             );
             return embed;
         case "ship upgrade heroic":
-            embed.setTitle('Daily Event')
+            embed.setTitle('6h Daily Event')
             embed.attachFiles(['./Images/shipUpgradeHeroic.png', './Images/Elephant.png'])
             embed.setThumbnail('attachment://shipUpgradeHeroic.png')
             embed.setColor(0x0f53d1)
             embed.setDescription('')
-            embed.setFooter('2Bot - All times  in UTC', 'attachment://Elephant.png')
+            embed.setFooter('Bot - All times  in UTC', 'attachment://Elephant.png')
             embed.addFields(
                 { name: 'Ship Upgrade - Heroic', value: '**Use Materials** to upgrade your ships to gain strength for incoming challengers.\n\nComplete this challenging Heroic event for grand rewards!' },
                 { name: '\u200B', value: '\u200B' },
@@ -190,12 +190,12 @@ function createSingleEventEmbed(event) {
             );
             return embed;
         case "ship upgrade slb":
-            embed.setTitle('Daily Event')
+            embed.setTitle('6h Daily Event')
             embed.attachFiles(['./Images/shipUpgradeHeroic.png', './Images/Elephant.png'])
             embed.setThumbnail('attachment://shipUpgradeHeroic.png')
             embed.setColor(0x0f53d1)
             embed.setDescription('')
-            embed.setFooter('2Bot - All times  in UTC', 'attachment://Elephant.png')
+            embed.setFooter('Bot - All times  in UTC', 'attachment://Elephant.png')
             embed.addFields(
                 { name: 'Ship Upgrade - Heroic', value: '**Use Materials** to upgrade your ships to gain strength for incoming challengers.\n\nCompete to earn the top prize!' },
                 { name: '\u200B', value: '\u200B' },
@@ -206,12 +206,12 @@ function createSingleEventEmbed(event) {
             );
             return embed;
         case "station upgrade":
-            embed.setTitle('Daily Event')
+            embed.setTitle('12h Daily Event')
             embed.attachFiles(['./Images/StationUpgrade.png', './Images/Elephant.png'])
             embed.setThumbnail('attachment://StationUpgrade.png')
             embed.setColor(0x0f53d1)
             embed.setDescription('')
-            embed.setFooter('2Bot', 'attachment://Elephant.png')
+            embed.setFooter('Bot - All times  in UTC', 'attachment://Elephant.png')
             embed.addFields(
                 { name: 'Station Upgrade', value: 'Build and Upgrade Modules to strengthen your Station' },
                 { name: '\u200B', value: '\u200B' },
@@ -221,12 +221,12 @@ function createSingleEventEmbed(event) {
             );
             return embed;
         case "station upgrade big":
-            embed.setTitle('Daily Event')
+            embed.setTitle('6h Daily Event')
             embed.attachFiles(['./Images/StationUpgrade.png', './Images/Elephant.png'])
             embed.setThumbnail('attachment://StationUpgrade.png')
             embed.setColor(0x0f53d1)
             embed.setDescription('')
-            embed.setFooter('2Bot', 'attachment://Elephant.png')
+            embed.setFooter('Bot - All times  in UTC', 'attachment://Elephant.png')
             embed.addFields(
                 { name: 'Station Upgrade', value: 'Build and Upgrade Modules to strengthen your Station\nComplete this challenging Heroic event for grand rewards!' },
                 { name: '\u200B', value: '\u200B' },
@@ -234,13 +234,14 @@ function createSingleEventEmbed(event) {
                 { name: 'Next Occurence', value: `\`\`\`Date: ${event[1]}\nTime: ${event[2]}\`\`\`` }
 
             );
-            return embed; case "station upgrade slb":
-            embed.setTitle('Daily Event')
+            return embed;
+        case "station upgrade slb":
+            embed.setTitle('6h Daily Event')
             embed.attachFiles(['./Images/StationUpgrade.png', './Images/Elephant.png'])
             embed.setThumbnail('attachment://StationUpgrade.png')
             embed.setColor(0x0f53d1)
             embed.setDescription('')
-            embed.setFooter('2Bot', 'attachment://Elephant.png')
+            embed.setFooter('Bot - All times  in UTC', 'attachment://Elephant.png')
             embed.addFields(
                 { name: 'Station Upgrade', value: 'Build and Upgrade Modules to strengthen your Station\n Compete to earn the top prize!' },
                 { name: '\u200B', value: '\u200B' },
@@ -256,12 +257,12 @@ function createSingleEventEmbed(event) {
 }
 function createDayScheduleEmbed(event) {
     const embed = new Discord.MessageEmbed()
-    embed.setTitle('Daily Event')
+    embed.setTitle('Daily Events')
     embed.attachFiles(['./Images/DailyEvents.png', './Images/Elephant.png'])
     embed.setThumbnail('attachment://DailyEvents.png')
     embed.setColor(0x0f53d1)
     embed.setDescription('Todays Events')
-    embed.setFooter('2Bot - All times  in UTC', 'attachment://Elephant.png')
+    embed.setFooter('Bot - All times  in UTC', 'attachment://Elephant.png')
     embed.addFields(
         { name: '05:00', value: `\`\`\`${event[0].info.events[0][0]}\n${event[0].info.events[1][0]}\`\`\``, },
         { name: '11:00', value: `\`\`\`${event[0].info.events[0][1]}\n${event[0].info.events[1][1]}\`\`\``, },
@@ -274,14 +275,14 @@ function createDayScheduleEmbed(event) {
 function createMultipleNextEventEmbed(event) {
     var eventName = format.capitalizeFirstLetter(event[0]);
     const embed = new Discord.MessageEmbed()
-    embed.setTitle('Daily Event')
-    embed.attachFiles(['./Images/DailyEvents.png', './Images/Elephant.png'])
+    embed.setTitle('Daily Events')
+    embed.attachFiles([`./Images/DailyEvents.png`, './Images/Elephant.png'])
     embed.setThumbnail('attachment://DailyEvents.png')
     embed.setColor(0x0f53d1)
-    embed.setDescription(`List of ${eventName} times.`)
-    embed.setFooter('2Bot - All times  in UTC', 'attachment://Elephant.png')
+    embed.setDescription(`List of ${eventName}`)
+    embed.setFooter('Bot - All times  in UTC', 'attachment://Elephant.png')
     embed.addFields(
-        { name: 'Date & times, value:',value:  `\`\`\`${event[1]}\`\`\``, }
+        { name: 'Date & times, value:', value: `\`\`\`${event[1]}\`\`\``, }
     );
     return embed;
 }

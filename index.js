@@ -1,7 +1,7 @@
 require('dotenv').config();
 var getEvents = require('./getEvents.js');
 const createEmbeddedMessages = require('./createEmbeddedMessages.js');
-const ArrToString = require('./convertArrayToString.js');
+const editFunctions = require('./editFunctions.js');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = '!';
@@ -38,7 +38,7 @@ client.on('message', message => {
       }ss    
     } else if (args[0] === 'next') {
       args.shift(); // remove next command from str arr
-      var stringArgument = ArrToString.ArgumentToString(args); //convert arr to str
+      var stringArgument = editFunctions.ArgumentToString(args); //convert arr to str
       var returnMessage = getEvents.getNextEvent(stringArgument); //
       if (returnMessage != null) {
         return message.channel.send(returnMessage);
@@ -48,7 +48,7 @@ client.on('message', message => {
 
     } else if(args[0]=== 'list') { 
       args.shift(); // remove next command from str arr
-      var stringArgument = ArrToString.ArgumentToString(args); //convert arr to str
+      var stringArgument = editFunctions.ArgumentToString(args); //convert arr to str
       var returnMessage = getEvents.getMultipleNextEvent(stringArgument); //
       if (returnMessage != null) {
         return message.channel.send(returnMessage);

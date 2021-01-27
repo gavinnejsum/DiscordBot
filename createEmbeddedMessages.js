@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const format = require('./convertArrayToString.js');
+const editFunctions = require('./editFunctions.js');
 //research ++
 //research slb++
 //research big++
@@ -273,13 +273,13 @@ function createDayScheduleEmbed(event) {
     return embed;
 }
 function createMultipleNextEventEmbed(event) {
-    var eventName = format.capitalizeFirstLetter(event[0]);
+    var eventName = editFunctions.capitalizeFirstLetter(event[0]);
     const embed = new Discord.MessageEmbed()
     embed.setTitle('Daily Events')
     embed.attachFiles([`./Images/DailyEvents.png`, './Images/Elephant.png'])
     embed.setThumbnail('attachment://DailyEvents.png')
     embed.setColor(0x0f53d1)
-    embed.setDescription(`List of ${eventName}`)
+    embed.setDescription(`List of coming ${eventName} events`)
     embed.setFooter('Bot - All times  in UTC', 'attachment://Elephant.png')
     embed.addFields(
         { name: 'Date & times, value:', value: `\`\`\`${event[1]}\`\`\``, }

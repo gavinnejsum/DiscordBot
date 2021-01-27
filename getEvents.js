@@ -117,17 +117,17 @@ function getMultipleNextEvent(eventName) {
     var returnString = "";
     var time;
     for (let element = 0; element < combinedData.length; element++) {
+        nextEventDay = currDay.add((combinedData[element].day - currEventDay), 'day');
         if (combinedData[element].info.events[0].indexOf(eventName) != -1) {
-            nextEventDay = currDay.add((combinedData[element].day - currEventDay), 'day');
             if (returnString.length == 0) {
                 returnString += nextEventDay.format('MMMM Do YYYY') + " At: " + combinedData[element].info.time[combinedData[element].info.events[0].indexOf(eventName)];
                 // returnString= "test";
             } else {
-                returnString += "\n" + nextEventDay.format('MMMM Do YYYY') + " At: " + combinedData[element].info.time[combinedData[element].info.events[0].indexOf(eventName)] ;
+                returnString += "\n" + nextEventDay.format('MMMM Do YYYY') + " At: " + combinedData[element].info.time[combinedData[element].info.events[0].indexOf(eventName)];
             }
-        } else {
+        } else if (combinedData[element].info.events[1].indexOf(eventName) != -1) {
             if (returnString.length == 0) {
-                returnString= nextEventDay.format('MMMM Do YYYY') + " At:" + combinedData[element].info.time[combinedData[element].info.events[1].indexOf(eventName)];
+                returnString += nextEventDay.format('MMMM Do YYYY') + " At:" + combinedData[element].info.time[combinedData[element].info.events[1].indexOf(eventName)];
             } else {
                 returnString += "\n" + nextEventDay.format('MMMM Do YYYY') + " At:" + combinedData[element].info.time[combinedData[element].info.events[1].indexOf(eventName)];
             }
@@ -138,6 +138,8 @@ function getMultipleNextEvent(eventName) {
     embed = createEmbeddedMessages.createMultipleNextEventEmbed([eventName, returnString]);
     return embed;
 }
+
+// getMultipleNextEvent("officer recruit");
 // console.log(getEventsEntireDay()[0].info.events[0][0]);
 // console.log(getOnlyNextEvent("officer xp slb"));
 module.exports = {

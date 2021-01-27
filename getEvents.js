@@ -110,7 +110,7 @@ function getMultipleNextEvent(eventName) {
         });
         foundDataAllRotation = foundDataFirstRotation.concat(foundDataSecondRotation);
         combinedData = updatedData.concat(foundDataAllRotation);
-        console.log(combinedData.length);
+        
     }
 
     var nextEventDay;
@@ -120,25 +120,24 @@ function getMultipleNextEvent(eventName) {
         if (combinedData[element].info.events[0].indexOf(eventName) != -1) {
             nextEventDay = currDay.add((combinedData[element].day - currEventDay), 'day');
             if (returnString.length == 0) {
-                returnString += nextEventDay.format('MMMM Do YYYY') + " " + combinedData[element].info.time[combinedData[element].info.events[0].indexOf(eventName)];
+                returnString += nextEventDay.format('MMMM Do YYYY') + " At:" + combinedData[element].info.time[combinedData[element].info.events[0].indexOf(eventName)];
                 // returnString= "test";
             } else {
-                returnString += "\n" + nextEventDay.format('MMMM Do YYYY') + " " + combinedData[element].info.time[combinedData[element].info.events[0].indexOf(eventName)];
+                returnString += "\n" + nextEventDay.format('MMMM Do YYYY') + " At: " + combinedData[element].info.time[combinedData[element].info.events[0].indexOf(eventName)] ;
             }
         } else {
             if (returnString.length == 0) {
-                returnString[element] = nextEventDay.format('MMMM Do YYYY') + " " + combinedData[element].info.time[combinedData[element].info.events[1].indexOf(eventName)];
+                returnString= nextEventDay.format('MMMM Do YYYY') + " At:" + combinedData[element].info.time[combinedData[element].info.events[1].indexOf(eventName)];
             } else {
-                returnString[element] = "\n" + nextEventDay.format('MMMM Do YYYY') + " " + combinedData[element].info.time[combinedData[element].info.events[1].indexOf(eventName)];
+                returnString += "\n" + nextEventDay.format('MMMM Do YYYY') + " At:" + combinedData[element].info.time[combinedData[element].info.events[1].indexOf(eventName)];
             }
         }
         // console.log(returnString);
     }
-
-    return returnString;
+    embed = createEmbeddedMessages.createMultipleNextEventEmbed([eventName, returnString]);
+    return embed;
 }
 // console.log(getEventsEntireDay()[0].info.events[0][0]);
-console.log("\n" + getMultipleNextEvent("research slb"));
 // console.log(getOnlyNextEvent("officer xp slb"));
 module.exports = {
     getAllMatchingEvents,

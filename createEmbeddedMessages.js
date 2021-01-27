@@ -279,11 +279,7 @@ function createMultipleNextEventEmbed(event) {
     embed.setDescription('Todays Events')
     embed.setFooter('2Bot - All times  in UTC', 'attachment://Elephant.png')
     embed.addFields(
-        { name: '05:00', value: `\`\`\`${event[0].info.events[0][0]}\n${event[0].info.events[1][0]}\`\`\``, },
-        { name: '11:00', value: `\`\`\`${event[0].info.events[0][1]}\n${event[0].info.events[1][1]}\`\`\``, },
-        { name: '17:00', value: `\`\`\`${event[0].info.events[0][2]}\n${event[0].info.events[1][2]}\`\`\``, },
-        { name: '23:00', value: `\`\`\`${event[0].info.events[0][3]}\n${event[0].info.events[1][3]}\`\`\``, }
-
+        { name: `${event[0]}`, value: `\`\`\`${event[1]}\`\`\``, }
     );
     return embed;
 }

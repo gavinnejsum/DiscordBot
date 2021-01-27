@@ -49,6 +49,17 @@ client.on('message', message => {
         return message.channel.send("Error");
       }
 
+    } else if(args[0]=== 'list') { 
+      args.shift(); // remove next command from str arr
+      var stringArgument = ArrToString.ArgumentToString(args); //convert arr to str
+      var returnMessage = getEvents.getMultipleNextEvent(stringArgument); //
+      if (returnMessage != null) {
+        return message.channel.send(returnMessage);
+      } else {
+        return message.channel.send("Error");
+      }
+
+
     }
   }
 });

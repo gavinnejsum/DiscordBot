@@ -278,10 +278,10 @@ function createMultipleNextEventEmbed(event) {
     embed.attachFiles(['./Images/DailyEvents.png', './Images/Elephant.png'])
     embed.setThumbnail('attachment://DailyEvents.png')
     embed.setColor(0x0f53d1)
-    embed.setDescription('Todays Events')
+    embed.setDescription(`List of ${eventName} times.`)
     embed.setFooter('2Bot - All times  in UTC', 'attachment://Elephant.png')
     embed.addFields(
-        { name: `${eventName}`, value: `\`\`\`${event[1]}\`\`\``, }
+        { name: 'Date & times, value:',value:  `\`\`\`${event[1]}\`\`\``, }
     );
     return embed;
 }

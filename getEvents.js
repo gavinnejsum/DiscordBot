@@ -120,7 +120,7 @@ function getMultipleNextEvent(eventName) {
         if (combinedData[element].info.events[0].indexOf(eventName) != -1) {
             nextEventDay = currDay.add((combinedData[element].day - currEventDay), 'day');
             if (returnString.length == 0) {
-                returnString += nextEventDay.format('MMMM Do YYYY') + " At:" + combinedData[element].info.time[combinedData[element].info.events[0].indexOf(eventName)];
+                returnString += nextEventDay.format('MMMM Do YYYY') + " At: " + combinedData[element].info.time[combinedData[element].info.events[0].indexOf(eventName)];
                 // returnString= "test";
             } else {
                 returnString += "\n" + nextEventDay.format('MMMM Do YYYY') + " At: " + combinedData[element].info.time[combinedData[element].info.events[0].indexOf(eventName)] ;
@@ -134,7 +134,7 @@ function getMultipleNextEvent(eventName) {
         }
         // console.log(returnString);
     }
-    
+
     embed = createEmbeddedMessages.createMultipleNextEventEmbed([eventName, returnString]);
     return embed;
 }

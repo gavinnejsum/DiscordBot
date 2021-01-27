@@ -1,0 +1,300 @@
+[
+  {
+    "day": "1",
+    "info": {
+      "time": [
+        "05:00",
+        "11:00",
+        "17:00",
+        "23:00"
+      ],
+      "events": [
+        [
+         
+          "research slb",
+          "officer recruit heroic",
+          "officer xp slb",
+          "station upgrade big"
+        ],
+        [
+          
+          "station upgrade",
+          "station upgrade",
+          "officer recruit",
+          "officer recruit"
+        ]
+      ]
+    }
+  },
+  {
+    "day": "2",
+    "info": {
+      "time": [
+        "05:00",
+        "11:00",
+        "17:00",
+        "23:00"
+      ],
+      "events": [
+        [
+          
+          "station upgrade big",
+          "ship upgrade slb",
+          "station upgrade slb",
+          "upgrade ships heroic"
+        ],
+        [
+          
+          "officer xp",
+          "officer xp",
+          "station upgrade",
+          "station upgrade"
+        ]
+      ]
+    }
+  },
+  {
+    "day": "3",
+    "info": {
+      "time": [
+        "05:00",
+        "11:00",
+        "17:00",
+        "23:00"
+      ],
+      "events": [
+        [
+          "officer xp big",
+          "research big",
+          "station upgrade slb",
+          "ship upgrade heroic"
+        ],
+        [
+          
+          "officer recruit",
+          "officer recruit",
+          "ship upgrade",
+          "ship upgrade"
+        ],
+        [
+          "research",
+          "research",
+          "",
+          ""
+        ]
+      ]
+    }
+  },
+  {
+    "day": "4",
+    "info": {
+      "time": [
+        "05:00",
+        "11:00",
+        "17:00",
+        "23:00"
+      ],
+      "events": [
+        [
+          
+          "officer recruit heroic",
+          "station upgrade big",
+          "officer xp big",
+          "ship upgrade slb"
+        ],
+        [
+         
+          "reseach",
+          "research",
+          "station upgrade",
+          "station upgrade"
+        ]
+      ]
+    }
+  },
+  {
+    "day": "5",
+    "info": {
+      "time": [
+        "05:00",
+        "11:00",
+        "17:00",
+        "23:00"
+      ],
+      "events": [
+        [
+          
+          "research slb",
+          "station upgrade big",
+          "officer recruit slb",
+          "ship upgrade heroic"
+        ],
+        [
+          
+          "ship upgrade",
+          "ship upgrade",
+          "station upgrade",
+          "station upgrade"
+        ]
+      ]
+    }
+  },
+  {
+    "day": "6",
+    "info": {
+      "time": [
+        "05:00",
+        "11:00",
+        "17:00",
+        "23:00"
+      ],
+      "events": [
+        [
+          
+          "officer xp slb",
+          "officer recruit heroic",
+          "station upgrade big",
+          "ship upgrade slb"
+
+        ],
+        [
+          
+          "research",
+          "research",
+          "research",
+          "research"
+        ]
+      ]
+    }
+  },
+  {
+    "day": "7",
+    "info": {
+      "time": [
+        "05:00",
+        "11:00",
+        "17:00",
+        "23:00"
+      ],
+      "events": [
+        [
+          "officer xp ",
+          "research big",
+          "officer recruit heroic",
+          "officer xp slb"
+        ],
+        [
+        
+          "officer xp",
+          "officer xp",
+          "research",
+          "research"
+        ]
+      ]
+    }
+  },
+  {
+    "day": "8",
+    "info": {
+      "time": [
+        "05:00",
+        "11:00",
+        "17:00",
+        "23:00"
+      ],
+      "events": [
+        [
+          "station upgrade big",
+          "station upgrade big",
+          "station upgrade slb",
+          "ship upgrade heroic"
+        ],
+        [
+          "upgrade ships",
+          "upgrade ships",
+          "research",
+          "research"
+        ]
+      ]
+    }
+  },
+  {
+    "day": "9",
+    "info": {
+      "time": [
+        "05:00",
+        "11:00",
+        "17:00",
+        "23:00"
+      ],
+      "events": [
+        [
+          
+          "research big",
+          "officer xp big",
+          "officer xp slb",
+          "research slb"
+        ],
+        [
+        
+          "officer recruit",
+          "officer recruit",
+          "research",
+          "research"
+        ]
+      ]
+    }
+  },
+  {
+    "day": "10",
+    "info": {
+      "time": [
+        "05:00",
+        "11:00",
+        "17:00",
+        "23:00"
+      ],
+      "events": [
+        [
+          "research big",
+          "upgrade ships heroic",
+          "research big",
+          "station upgrade slb"
+        ],
+        [
+          
+          "research",
+          "research",
+          "station upgrade",
+          "station upgrade"
+        ]
+      ]
+    }
+  },
+  {
+    "day": "11",
+    "info": {
+      "time": [
+        "05:00",
+        "11:00",
+        "17:00",
+        "23:00"
+      ],
+      "events": [
+        [
+          "upgrade ships heroic",
+          "research big",
+          "upgrade ships heroic",
+          "research slb"
+        ],
+        [
+          
+          "officer xp",
+          "officer xp",
+          "officer recruit",
+          "officer recruit "
+        ]
+      ]
+    }
+  }
+]

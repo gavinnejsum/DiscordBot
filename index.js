@@ -1,5 +1,5 @@
 require('dotenv').config();
-var schedule = require('./getEvents.js');
+var getEvents = require('./getEvents.js');
 const createEmbeddedMessages = require('./createEmbeddedMessages.js');
 const ArrToString = require('./convertArrayToString.js');
 const Discord = require('discord.js');
@@ -32,23 +32,24 @@ client.on('message', message => {
     if (!args.length) {
       return message.channel.send(`you did not provide any arguments, ${message.author}!`)
     } else if (args[0] === 'today') {
-      return message.channel.send('todays events are:');
+      var event = getEvents.getEventsEntireDay();
+      embed = createEmbeddedMessages.createDayScheduleEmbed(event);
+      if (embed != null) {
+        return message.channel.send(embed);
+      } else {
+        return message.channel.send("Error");
+      }ss    
     } else if (args[0] === 'next') {
-      args.shift();
-      var stringArgument = ArrToString.ArgumentToString(args);
-      var returnMessage = schedule.getNextEvent(stringArgument);
-      // if (returnMessage.length == 0) {
-      //   message.channel.send(`Query: ${command + " " + stringArgument}\nResponse: ${returnMessage[0]}`);
-      // }
+      args.shift(); // remove next command from str arr
+      var stringArgument = ArrToString.ArgumentToString(args); //convert arr to str
+      var returnMessage = getEvents.getNextEvent(stringArgument); //
       if (returnMessage != null) {
-       return message.channel.send(returnMessage);
+        return message.channel.send(returnMessage);
       } else {
         return message.channel.send("Error");
       }
 
     }
   }
-
-
 });
 

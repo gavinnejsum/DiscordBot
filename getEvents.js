@@ -68,11 +68,14 @@ function getNextEvent(eventName) {
 }
 
 function getEventsEntireDay() {
+    var currDay = new dayjs(new Date());
     var dayDifference = currDay.diff(startDate, 'day') + 1; // finds daydifference to calculate current event day
     var currEventDay;
-
     if (dayDifference > 11) {  // if daydifference is bigger than 11 
         var currEventDay = dayDifference % 11;
+        if (currEventDay == 0) {
+            currEventDay = 11;
+        }
     } else {
         currEventDay = dayDifference;
     }
@@ -83,7 +86,7 @@ function getEventsEntireDay() {
     });
     return foundData; // return embed instead of array
 }
-
+getEventsEntireDay();
 function getListOfEvent(eventName) {
     var dayDifference = currDay.diff(startDate, 'day') + 1; // finds daydifference to calculate current event day
     var currEventDay;

@@ -15,21 +15,21 @@ const editFunctions = require('./editFunctions.js');
 //station upgrade++
 //station upgrade big
 //station upgrade slb
-function createSingleEventEmbed(event) {
-    const embed = new Discord.MessageEmbed()
-    switch (event[0]) {
-        case "research":
-            embed.setTitle('12h Daily Event')
-            embed.attachFiles(['./Images/research.png', './Images/Elephant.png'])
-            embed.setThumbnail('attachment://research.png')
-            embed.setColor(0x0f53d1)
-            embed.setDescription('')
-            embed.setFooter('Bot - All times  in UTC', 'attachment://Elephant.png')
-            embed.addFields(
-                { name: 'Research', value: 'Conduct **Researches** in your R&D Department to propel your power to the next level.' },
-                { name: '\u200B', value: '\u200B' },
-                { name: 'Research', value: '\n 1 Power Increased by Research | 1 point', inline: true },
-                { name: 'Next Occurence', value: `\`\`\`Date: ${event[1]}\nTime: ${event[2]}\`\`\`` }
+// function createSingleEventEmbed(event) {
+//     const embed = new Discord.MessageEmbed()
+//     switch (event[0]) {
+//         case "research":
+//             embed.setTitle('12h Daily Event')
+//             embed.attachFiles(['./Images/research.png', './Images/Elephant.png'])
+//             embed.setThumbnail('attachment://research.png')
+//             embed.setColor(0x0f53d1)
+//             embed.setDescription('')
+//             embed.setFooter('Bot - All times  in UTC', 'attachment://Elephant.png')
+//             embed.addFields(
+//                 { name: 'Research', value: 'Conduct **Researches** in your R&D Department to propel your power to the next level.' },
+//                 { name: '\u200B', value: '\u200B' },
+//                 { name: 'Research', value: '\n 1 Power Increased by Research | 1 point', inline: true },
+//                 { name: 'Next Occurence', value: `\`\`\`Date: ${event[1]}\nTime: ${event[2]}\`\`\`` }
 
             );
             return embed;

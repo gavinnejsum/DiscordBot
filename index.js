@@ -5,7 +5,7 @@ const editFunctions = require('./editFunctions.js');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = '!';
-const TOKEN = process.env.TestToken;
+const TOKEN = process.env.TOKEN;
 
 
 client.login(TOKEN);

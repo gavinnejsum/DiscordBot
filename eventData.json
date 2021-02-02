@@ -1,0 +1,167 @@
+[
+    {
+        "EventName": "Research",
+        "info": {
+            "eventDuration" : "6",
+            "eventDescription": "Conduct **Researches** in your R&D Department to propel your power to the next level.",
+            "objectiveDescription": [
+                "Complete Researches",
+                "```1 Power Increased by Research | 1 point```"
+            ]
+        }
+    },
+    {
+        "EventName": "Research Big",
+        "info": {
+            "eventDuration" : "6",
+            "eventDescription": "Conduct **Researches** in your R&D Department to propel your power to the next level.",
+            "objectiveDescription": [
+                "Complete Researches",
+                "```1 Power Increased by Research | 1 point```"
+            ]
+        }
+    },
+    {
+        "EventName": "Research SLB",
+        "info": {
+            "eventDuration" : "6",
+            "eventDescription": "Conduct **Researches** in your R&D Department to propel your power to the next level.\n\nScore more than the opposition and grab the top prize!",
+            "objectiveDescription": [
+                "Complete Researches",
+                "```1 Power Increased by Research | 1 point```"
+            ]
+        }
+    },
+    {
+        "EventName": "Officer Recruit",
+        "info": {
+            "eventDuration" : "12",
+            "eventDescription": "Collect **shards** to promote and increase officers' combat power.",
+            "objectiveDescription": [
+                "Earn Officer Shards",
+                "```1 Uncommon Shard | 10 points\n1 Rare Shard | 50 points\n1 Epic Shards 150 points```"
+            ]
+        }
+    },
+    {
+        "EventName": "Officer Recruit Heroic",
+        "info": {
+            "eventDuration" : "6",
+            "eventDescription": "Collect **shards** to promote and increase officers' combat power.\n\nComplete this challenging Heroic event for grand rewards!",
+            "objectiveDescription": [
+                "Earn Officer Shards",
+                "```1 Uncommon Shard | 10 points\n1 Rare Shard | 50 points\n1 Epic Shards 150 points```"
+            ]
+        }
+    },
+    {
+        "EventName": "Officer Recruit SLB",
+        "info": {
+            "eventDuration" : "6",
+            "eventDescription": "Collect **shards** to promote and increase officers' combat power.\n\nScore more than the opposition and grab the top prize!",
+            "objectiveDescription": [
+                "Earn Officer Shards",
+                "```1 Uncommon Shard | 10 points\n1 Rare Shard | 50 points\n1 Epic Shards 150 points```"
+            ]
+        }
+    },
+    {
+        "EventName": "Officer XP",
+        "info": {
+            "eventDuration" : "12",
+            "eventDescription": "Level up your Officers for higher combat power",
+            "objectiveDescription": [
+                "Level Up Officers:",
+                "```1 Officer Intel Spent | 1 point```"
+            ]
+        }
+    },
+    {
+        "EventName": "Officer XP Big",
+        "info": {
+            "eventDuration" : "6",
+            "eventDescription": "Level up your Officers for higher combat power",
+            "objectiveDescription": [
+                "Level Up Officers:",
+                "```1 Officer Intel Spent | 1 point```"
+            ]
+        }
+    },
+    {
+        "EventName": "Officer XP SLB",
+        "info": {
+            "eventDuration" : "6",
+            "eventDescription": "Level up your Officers for higher combat power.\n\nScore more than the opposition and grab the top prize!",
+            "objectiveDescription": [
+                "Level Up Officers:",
+                "```1 Officer Intel Spent | 1 point```"
+            ]
+        }
+    },
+    {
+        "EventName": "Ship Upgrade",
+        "info": {
+            "eventDuration" : "12",
+            "eventDescription": "**Use Materials** to upgrade your ships to gain strength for incoming challengers.",
+            "objectiveDescription": [
+                "G3 Materials on Ships",
+                "```1 G3 U Cry | 10 points\n1 G3 U Gas | 10 points\n1 G3 U Ore | 10 points\n1 G3 R Cry | 100 points\n1 G3 R Gas | 100 points\n1 G3 R Ore | 100 points\n```"
+            ]
+        }
+    },
+    {
+        "EventName": "Ship Upgrade SLB",
+        "info": {
+            "eventDuration" : "6",
+            "eventDescription":"**Use Materials** to upgrade your ships to gain strength for incoming challengers.\nComplete this challenging Heroic event for grand rewards!",
+            "objectiveDescription": [
+                "G3 Materials on Ships",
+                "```1 G3 U Cry | 10 points\n1 G3 U Gas | 10 points\n1 G3 U Ore | 10 points\n1 G3 R Cry | 100 points\n1 G3 R Gas | 100 points\n1 G3 R Ore | 100 points\n```"
+            ]
+        }
+    },
+    {
+        "EventName": "Ship Upgrade SLB",
+        "info": {
+            "eventDuration" : "6",
+            "eventDescription": "**Use Materials** to upgrade your ships to gain strength for incoming challengers.\nScore more than the opposition and grab the top prize!",
+            "objectiveDescription": [
+                "G3 Materials on Ships",
+                "```1 G3 U Cry | 10 points\n1 G3 U Gas | 10 points\n1 G3 U Ore | 10 points\n1 G3 R Cry | 100 points\n1 G3 R Gas | 100 points\n1 G3 R Ore | 100 points\n```"
+            ]
+        }
+    },
+    {
+        "EventName": "Station Upgrade",
+        "info": {
+            "eventDuration" : "12",
+            "eventDescription": "**Build** and **Upgrade Modules** to strengthen your Station",
+            "objectiveDescription": [
+                "Upgrade station",
+                "```1 Power Increased by Building | 1 point```"               
+            ]
+        }
+    },
+    {
+        "EventName": "Station Upgrade Big",
+        "info": {
+            "eventDuration" : "6",
+            "eventDescription": "**Build** and **Upgrade Modules** to strengthen your Station\n\nComplete this challenging event for grand rewards!",
+            "objectiveDescription": [
+                "Upgrade station",
+                "```1 Power Increased by Building | 1 point```" 
+            ]
+        }
+    },
+    {
+        "EventName": "Station Upgrade SLB",
+        "info": {
+            "eventDuration" : "6",
+            "eventDescription": "**Build** and **Upgrade Modules** to strengthen your Station\n\nScore more than the opposition and grab the top prize!",
+            "objectiveDescription": [
+                "Upgrade station",
+                "```1 Power Increased by Building | 1 point```" 
+               ]
+        }
+    }          
+]

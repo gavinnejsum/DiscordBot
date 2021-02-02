@@ -5,7 +5,7 @@ const editFunctions = require('./editFunctions.js');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = '!';
-const TOKEN = process.env.TOKEN;
+const TOKEN = process.env.TestToken;
 
 
 client.login(TOKEN);
@@ -14,15 +14,15 @@ client.once('ready', () => {
   console.info(`Logged in as ${client.user.tag}!`);
 });
 
-client.on('message', message => {
-  if (message.content === 'hello') {
+// client.on('message', message => {
+//   if (message.content === 'hello') {
 
-    console.log
-    message.author.send("Hello");
+  
+//     message.author.send("Hello");
 
-    // client.users.get("804383811630399498").send("Hi");
-  }
-});
+//     // client.users.get("804383811630399498").send("Hi");
+//   }
+// });
 
 client.on('message', message => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
@@ -31,7 +31,7 @@ client.on('message', message => {
   const command = args.shift().toLowerCase();
   if (command === 'event') {
     if (!args.length) {
-      return message.channel.send(`you did not provide any arguments, ${message.author}!`)
+      return message.channel.send(`You did not provide any command arguments`)
     } else if (args[0] === 'today') {
       var event = getEvents.getEventsEntireDay();
       embed = createEmbeddedMessages.createDayScheduleEmbed(event);
@@ -62,6 +62,13 @@ client.on('message', message => {
 
 
     }
-  }
+  } 
+  // else if (command === 'help') {
+  //   if (!args.length) {
+  //     return message.channel.send("You did not provide any command arguments");
+  //     var embed = 
+  //     return message.channel.send()
+  //   }
+  // }
 });
 

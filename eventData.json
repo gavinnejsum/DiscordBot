@@ -110,7 +110,7 @@
         }
     },
     {
-        "EventName": "Ship Upgrade SLB",
+        "EventName": "Ship Upgrade Heroic",
         "info": {
             "eventDuration" : "6",
             "eventDescription":"**Use Materials** to upgrade your ships to gain strength for incoming challengers.\nComplete this challenging Heroic event for grand rewards!",

@@ -21,7 +21,7 @@ const getEventData = require('./getEventData');
 function createSingleEventEmbed(event) {
     var eventName = editFunctions.capitalizeFirstLetter(event[0]);
     eventData = getEventData.findEventData(eventName); 
-    if(eventData != undefined) { 
+    if(eventData[0] != undefined) { 
 
         const embed = new Discord.MessageEmbed()
         

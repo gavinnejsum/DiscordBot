@@ -30,7 +30,7 @@ function capitalizeFirstLetter(str) {
 
     return splitString.join(" ");
 }
-console.log(capitalizeFirstLetter("officer xp slb"))
+
 function removeSpacesBetweenWords(str) {
     var splitStr = str.split(" ");
     var newStr = "";

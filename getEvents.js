@@ -6,7 +6,7 @@ const clone = require('rfdc')()
 var advancedFormat = require('dayjs/plugin/advancedFormat');
 dayjs.extend(advancedFormat);
 
-var currDay = new dayjs(new Date());
+// var currDay = new dayjs(new Date());
 var startDate = dayjs('2021-01-11');
 // var currDay = dayjs('2021-01-12');
 
@@ -23,6 +23,7 @@ function getAllMatchingEvents(eventName) {
     return foundData;
 }
 function getNextEvent(eventName) {
+    var currDay = new dayjs(new Date());
     var dayDifference = currDay.diff(startDate, 'day') + 1; // finds daydifference to calculate current event day
     var currEventDay;
     if (dayDifference > 11) {  // if daydifference is bigger than 11 
@@ -88,6 +89,7 @@ function getEventsEntireDay() {
 }
 getEventsEntireDay();
 function getListOfEvent(eventName) {
+    var currDay = new dayjs(new Date());
     var dayDifference = currDay.diff(startDate, 'day') + 1; // finds daydifference to calculate current event day
     var currEventDay;
     var combinedData;

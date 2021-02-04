@@ -20,10 +20,9 @@ client.on('message', message => {
 
   const args = message.content.slice(prefix.length).trim().split(/ +/);
   const command = args.shift().toLowerCase();
-  console.log(command); 
+ 
   if (command === 'event') {
     args0 = args[0].toLowerCase();
-    console.log(args0);
     if (!args0.length) {
       return message.channel.send(`You did not provide any command arguments`)
     } else if (args0 === 'today') {

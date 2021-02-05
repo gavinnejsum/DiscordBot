@@ -3,6 +3,7 @@ var getEvents = require('./getEvents.js');
 const createEmbeddedMessages = require('./createEmbeds.js');
 const editFunctions = require('./editFunctions.js');
 const Discord = require('discord.js');
+const dayjs = require('dayjs');
 const client = new Discord.Client();
 const prefix = '!';
 const TOKEN = process.env.TOKEN;
@@ -17,7 +18,7 @@ client.once('ready', () => {
 
 client.on('message', message => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
-
+   currDayAndTime = dayjs(message.createdTimestamp); 
   const args = message.content.slice(prefix.length).trim().split(/ +/);
   const command = args.shift().toLowerCase();
  
@@ -26,7 +27,7 @@ client.on('message', message => {
     if (!args0.length) {
       return message.channel.send(`You did not provide any command arguments`)
     } else if (args0 === 'today') {
-      var event = getEvents.getEventsEntireDay();
+      var event = getEvents.getEventsEntireDay(currDayAndTime);
       embed = createEmbeddedMessages.createDayScheduleEmbed(event);
       if (embed != null) {
         return message.channel.send(embed);
@@ -36,7 +37,7 @@ client.on('message', message => {
     } else if (args0 === 'next') {
       args.shift(); // remove next command from str arr
       var stringArgument = editFunctions.ArgumentToString(args); //convert arr to str
-      var returnMessage = getEvents.getNextEvent(stringArgument); //
+      var returnMessage = getEvents.getNextEvent(stringArgument, currDayAndTime); //
       if (returnMessage != null) {
         return message.channel.send(returnMessage);
       } else {
@@ -46,7 +47,7 @@ client.on('message', message => {
     } else if (args0 === 'list') {
       args.shift(); // remove next command from str arr
       var stringArgument = editFunctions.ArgumentToString(args); //convert arr to str
-      var returnMessage = getEvents.getListOfEvent(stringArgument); //
+      var returnMessage = getEvents.getListOfEvent(stringArgument, currDayAndTime) //
       if (returnMessage != null) {
         return message.channel.send(returnMessage);
       } else {

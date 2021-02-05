@@ -6,11 +6,11 @@ const Discord = require('discord.js');
 const dayjs = require('dayjs');
 const client = new Discord.Client();
 const prefix = '!';
-// const TOKEN = process.env.TOKEN;
+const TOKEN = process.env.TOKEN;
 const TESTTOKEN = process.env.TESTTOKEN;
 
 
-client.login(TESTTOKEN);
+client.login(TOKEN);
 
 client.once('ready', () => {
   console.info(`Logged in as ${client.user.tag}!`);

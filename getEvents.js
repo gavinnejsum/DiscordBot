@@ -47,7 +47,6 @@ function getNextEvent(eventName, currDay) {
                 if (updatedData[element].info.events[0].indexOf(eventName) != -1) {
                     var eventTimes = [];
                     if (currEventDay == parseInt(updatedData[element].day)) {
-                        console.log("now is curr day");
                         for (let index = 0; index < updatedData[element].info.events[0].length; index++) {
                             if (updatedData[element].info.events[0][index] == eventName) {
                                 eventTimes.push(index);

@@ -46,8 +46,6 @@ function getNextEvent(eventName, currDay) {
                 nextEventDay = currDay.add((updatedData[element].day - currEventDay), 'day');
                 if (updatedData[element].info.events[0].indexOf(eventName) != -1) {
                     var eventTimes = [];
-                    console.log("curr ev day " + currEventDay)
-                    console.log("element.day " +parseInt(updatedData[element].day))
                     if (currEventDay == parseInt(updatedData[element].day)) {
                         console.log("now is curr day");
                         for (let index = 0; index < updatedData[element].info.events[0].length; index++) {
@@ -61,7 +59,6 @@ function getNextEvent(eventName, currDay) {
                             break;
                         }
                     } else { 
-                        console.log("current event day " + updatedData[element].day)
                         firstEventFound = [eventName, nextEventDay.format('MMMM Do YYYY'), updatedData[element].info.time[updatedData[element].info.events[0].indexOf(eventName)]];
                         break;
                     }
@@ -86,7 +83,6 @@ function getNextEvent(eventName, currDay) {
                 }
             }
             if (firstEventFound == undefined) {
-                console.log("hi")
                 firstEventFound = lastDayScenario(foundData, currDay, eventName, currEventDay, nextEventDay);
             }
         }
@@ -99,7 +95,7 @@ function getNextEvent(eventName, currDay) {
 
 function lastDayScenario(foundData, currDay, eventName, currEventDay, nextEventDay) {
     var firstEventFound;
-    console.log(foundData);
+    
     for (var element = 0; element < foundData.length; element++) {
         nextEventDay = currDay.add((11 - currEventDay + parseInt(foundData[element].day)), 'day');
         if (foundData[element].info.events[0].indexOf(eventName) != -1) {
@@ -111,7 +107,6 @@ function lastDayScenario(foundData, currDay, eventName, currEventDay, nextEventD
             break;
         }
     }
-    console.log(firstEventFound);
     return firstEventFound;
 }
 

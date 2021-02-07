@@ -1,6 +1,15 @@
 const Discord = require('discord.js');
 const editFunctions = require('./editFunctions.js');
 const getEventData = require('./getEventData');
+const dayjs = require('dayjs');
+var advancedFormat = require('dayjs/plugin/advancedFormat');
+var utc = require('dayjs/plugin/utc');
+var timezone = require('dayjs/plugin/timezone');
+var calendar = require('dayjs/plugin/calendar');
+dayjs.extend(advancedFormat);
+dayjs.extend(utc);
+dayjs.extend(timezone);
+dayjs.extend(calendar)
 
 //research ++
 //research slb++
@@ -10,7 +19,7 @@ const getEventData = require('./getEventData');
 //officer recruit slb ++
 //officer XP ++
 //officer XP Big ++
-//officer xp slb ++
+//officer xp slb ++ 
 //ship upgrade ++
 //ship upgrade heroic++
 //ship upgrade slb++
@@ -18,38 +27,38 @@ const getEventData = require('./getEventData');
 //station upgrade big
 //station upgrade slb
 
-function createSingleEventEmbed(event) {
+function createSingleEventEmbed(event, timestampOfMessage) {
     var eventName = editFunctions.capitalizeFirstLetter(event[0]);
-    eventData = getEventData.findEventData(eventName); 
-    if(eventData[0] != undefined) { 
+    eventData = getEventData.findEventData(eventName);
+    if (eventData[0] != undefined) {
 
         const embed = new Discord.MessageEmbed()
-        
+
         embed.setTitle(`Daily Event - ${eventData[0].info.eventDuration}h`)
         embed.attachFiles([`./Images/${editFunctions.removeSpacesBetweenWords(eventName)}.png`, './Images/Elephant.png'])
         embed.setThumbnail(`attachment://${editFunctions.removeSpacesBetweenWords(eventName)}.png`)
         embed.setColor(0x0f53d1)
         embed.setDescription('')
-        embed.setFooter('Bot - All times  in UTC', 'attachment://Elephant.png')
+        embed.setFooter(`Bot - All times  in UTC | sent ${timestampOfMessage.calendar()}`, 'attachment://Elephant.png')
         embed.addFields(
-            { name: `${eventName}`, value:`${eventData[0].info.eventDescription}`},
+            { name: `${eventName}`, value: `${eventData[0].info.eventDescription}` },
             { name: '\u200B', value: '\u200B' },
             { name: `${eventData[0].info.objectiveDescription[0]}`, value: `${eventData[0].info.objectiveDescription[1]}`, inline: true },
             { name: 'Next Occurence', value: `\`\`\`Date: ${event[1]}\nTime: ${event[2]}\`\`\`` });
-            return embed;
-        }
-         return null;
-        }
-        function createDayScheduleEmbed(event) {
-            
-            const embed = new Discord.MessageEmbed()
-            embed.setTitle('Daily Events')
-            embed.attachFiles(['./Images/DailyEvents.png', './Images/Elephant.png'])
-            embed.setThumbnail('attachment://DailyEvents.png')
-            embed.setColor(0x0f53d1)
-            embed.setDescription('Todays Events')
-            embed.setFooter('Bot - All times  in UTC', 'attachment://Elephant.png')
-            embed.addFields(
+        return embed;
+    }
+    return null;
+}
+function createDayScheduleEmbed(event) {
+
+    const embed = new Discord.MessageEmbed()
+    embed.setTitle('Daily Events')
+    embed.attachFiles(['./Images/DailyEvents.png', './Images/Elephant.png'])
+    embed.setThumbnail('attachment://DailyEvents.png')
+    embed.setColor(0x0f53d1)
+    embed.setDescription('Todays Events')
+    embed.setFooter('Bot - All times  in UTC', 'attachment://Elephant.png')
+    embed.addFields(
         { name: '05:00', value: `\`\`\`${editFunctions.capitalizeFirstLetter(event[0].info.events[0][0])}\n${editFunctions.capitalizeFirstLetter(event[0].info.events[1][0])}\`\`\``, },
         { name: '11:00', value: `\`\`\`${editFunctions.capitalizeFirstLetter(event[0].info.events[0][1])}\n${editFunctions.capitalizeFirstLetter(event[0].info.events[1][1])}\`\`\``, },
         { name: '17:00', value: `\`\`\`${editFunctions.capitalizeFirstLetter(event[0].info.events[0][2])}\n${editFunctions.capitalizeFirstLetter(event[0].info.events[1][2])}\`\`\``, },

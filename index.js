@@ -18,10 +18,10 @@ client.once('ready', () => {
 
 client.on('message', message => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
-   currDayAndTime = dayjs(message.createdTimestamp); 
+  currDayAndTime = dayjs(message.createdTimestamp);
   const args = message.content.slice(prefix.length).trim().split(/ +/);
   const command = args.shift().toLowerCase();
- 
+
   if (command === 'event') {
     args0 = args[0].toLowerCase();
     if (!args0.length) {
@@ -33,7 +33,7 @@ client.on('message', message => {
         return message.channel.send(embed);
       } else {
         return message.channel.send("Error");
-      } 
+      }
     } else if (args0 === 'next') {
       args.shift(); // remove next command from str arr
       var stringArgument = editFunctions.ArgumentToString(args); //convert arr to str
@@ -56,8 +56,8 @@ client.on('message', message => {
 
 
     }
-  } else if(command === "cake") { 
-      return message.channel.send("Everyone deserves some cake :cake:")
+  } else if (command === "cake") {
+    return message.channel.send("Everyone deserves some cake :cake:")
   }
   // else if (command === 'help') {
   //   if (!args.length) {

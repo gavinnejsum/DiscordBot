@@ -1,16 +1,20 @@
 const helpers = require('./helpers.js');
 const eventData = require('./data.json');
 const createEmbeddedMessages = require('./createEmbeds.js');
-const dayjs = require('dayjs');
 const clone = require('rfdc')()
+const dayjs = require('dayjs');
 var advancedFormat = require('dayjs/plugin/advancedFormat');
+var utc = require('dayjs/plugin/utc');
+var timezone = require('dayjs/plugin/timezone');
 dayjs.extend(advancedFormat);
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
 // var testDay = new dayjs(new Date());
 // var testDay = dayjs('2021-02-04').hour(20);
+// getNextEvent("ship upgrade", testDay);
 var startDate = dayjs('2021-01-11');
 
-// getNextEvent("ship upgrade", testDay);
 function getAllMatchingEvents(eventName) {
 
     // Find all days with a matching event name
@@ -23,6 +27,7 @@ function getAllMatchingEvents(eventName) {
     return foundData;
 }
 function getNextEvent(eventName, currDay) {
+    currDayInGMT = currDay.utc();
     var dayDifference = currDay.diff(startDate, 'day') + 1; // finds daydifference to calculate current event day
     var currEventDay;
     if (dayDifference > 11) {  // if daydifference is bigger than 11 
@@ -39,11 +44,11 @@ function getNextEvent(eventName, currDay) {
             return parseInt(element.day) >= parseInt(currEventDay);
         });
         if (updatedData.length == 0) {
-            firstEventFound = lastDayScenario(foundData, currDay, eventName, currEventDay, nextEventDay);
+            firstEventFound = lastDayScenario(foundData, currDayInGMT, eventName, currEventDay, nextEventDay);
             // ----------------------------------------------------------------------------------------------------------------
         } else if (updatedData.length > 0) {
             for (var element = 0; element < updatedData.length; element++) {
-                nextEventDay = currDay.add((updatedData[element].day - currEventDay), 'day');
+                nextEventDay = currDayInGMT.add((updatedData[element].day - currEventDay), 'day');
                 if (updatedData[element].info.events[0].indexOf(eventName) != -1) {
                     var eventTimes = [];
                     if (currEventDay == parseInt(updatedData[element].day)) {
@@ -52,7 +57,7 @@ function getNextEvent(eventName, currDay) {
                                 eventTimes.push(index);
                             }
                         }
-                        nextEventTime = helpers.isEventPassed(currDay, eventTimes);
+                        nextEventTime = helpers.isEventPassed(currDayInGMT, eventTimes);
                         if (nextEventTime != -1) {
                             firstEventFound = [eventName, nextEventDay.format('MMMM Do YYYY'), nextEventTime + ":00 "];
                             break;
@@ -70,7 +75,7 @@ function getNextEvent(eventName, currDay) {
                                 eventTimes.push(index);
                             }
                         }
-                        nextEventTime = helpers.isEventPassed(currDay, eventTimes);
+                        nextEventTime = helpers.isEventPassed(currDayInGMT, eventTimes);
                         if (nextEventTime != -1) {
                             firstEventFound = [eventName, nextEventDay.format('MMMM Do YYYY'), nextEventTime + ":00 "];
                             break;
@@ -82,13 +87,13 @@ function getNextEvent(eventName, currDay) {
                 }
             }
             if (firstEventFound == undefined) {
-                firstEventFound = lastDayScenario(foundData, currDay, eventName, currEventDay, nextEventDay);
+                firstEventFound = lastDayScenario(foundData, currDayInGMT, eventName, currEventDay, nextEventDay);
             }
         }
         else {
             firstEventFound = ["Event not found"];
         }
-        return createEmbeddedMessages.createSingleEventEmbed(firstEventFound);
+        return createEmbeddedMessages.createSingleEventEmbed(firstEventFound, currDay);
     }
 }
 

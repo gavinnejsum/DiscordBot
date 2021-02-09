@@ -62,7 +62,7 @@ function getNextEvent(eventName, currDay) {
                             firstEventFound = [eventName, nextEventDay.format('MMMM Do YYYY'), nextEventTime + ":00 "];
                             break;
                         }
-                    } else { 
+                    } else {
                         firstEventFound = [eventName, nextEventDay.format('MMMM Do YYYY'), updatedData[element].info.time[updatedData[element].info.events[0].indexOf(eventName)]];
                         break;
                     }
@@ -99,15 +99,15 @@ function getNextEvent(eventName, currDay) {
 
 function lastDayScenario(foundData, currDay, eventName, currEventDay, nextEventDay) {
     var firstEventFound;
-    
+
     for (var element = 0; element < foundData.length; element++) {
         nextEventDay = currDay.add((11 - currEventDay + parseInt(foundData[element].day)), 'day');
         if (foundData[element].info.events[0].indexOf(eventName) != -1) {
-            firstEventFound = [eventName, nextEventDay.format('MMMM Do YYYY'), foundData[element].info.time[foundData[element].info.events[0].indexOf(eventName)] ]; 
+            firstEventFound = [eventName, nextEventDay.format('MMMM Do YYYY'), foundData[element].info.time[foundData[element].info.events[0].indexOf(eventName)]];
             break;
             // ----------------------------------------------------------------------------------------------------------------
         } else if (foundData[element].info.events[1].indexOf(eventName) != -1) {
-            firstEventFound = [eventName, nextEventDay.format('MMMM Do YYYY'), foundData[element].info.time[foundData[element].info.events[1].indexOf(eventName)] ]; 
+            firstEventFound = [eventName, nextEventDay.format('MMMM Do YYYY'), foundData[element].info.time[foundData[element].info.events[1].indexOf(eventName)]];
             break;
         }
     }
@@ -168,16 +168,29 @@ function getListOfEvent(eventName, currDay) {
         for (let element = 0; element < combinedData.length; element++) {
             nextEventDay = currDay.add((combinedData[element].day - currEventDay), 'day');
             if (combinedData[element].info.events[0].indexOf(eventName) != -1) {
-                if (returnString.length == 0) {
-                    returnString += nextEventDay.format('MMMM Do YYYY') + " At: " + combinedData[element].info.time[combinedData[element].info.events[0].indexOf(eventName)];
-                } else {
-                    returnString += "\n" + nextEventDay.format('MMMM Do YYYY') + " At: " + combinedData[element].info.time[combinedData[element].info.events[0].indexOf(eventName)];
+                if (combinedData[element].info.events[0].indexOf(eventName) != -1) {
+
+                    for (let index = 0; index < combinedData[element].info.events[0].length; index++) {
+
+                        if (combinedData[element].info.events[0][index] == eventName) {
+                            if (returnString.length == 0) {
+                                returnString += nextEventDay.format('MMMM Do YYYY') + " At: " + combinedData[element].info.time[index];
+                            } else {
+                                returnString += "\n" + nextEventDay.format('MMMM Do YYYY') + " At: " + combinedData[element].info.time[index];
+                            }
+                        }
+                    }
                 }
             } else if (combinedData[element].info.events[1].indexOf(eventName) != -1) {
-                if (returnString.length == 0) {
-                    returnString += nextEventDay.format('MMMM Do YYYY') + " At:" + combinedData[element].info.time[combinedData[element].info.events[1].indexOf(eventName)];
-                } else {
-                    returnString += "\n" + nextEventDay.format('MMMM Do YYYY') + " At:" + combinedData[element].info.time[combinedData[element].info.events[1].indexOf(eventName)];
+                for (let index = 0; index < combinedData[element].info.events[1].length; index++) {
+
+                    if (combinedData[element].info.events[1][index] == eventName) {
+                        if (returnString.length == 0) {
+                            returnString += nextEventDay.format('MMMM Do YYYY') + " At: " + combinedData[element].info.time[index];
+                        } else {
+                            returnString += "\n" + nextEventDay.format('MMMM Do YYYY') + " At: " + combinedData[element].info.time[index];
+                        }
+                    }
                 }
             }
         }

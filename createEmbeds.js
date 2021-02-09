@@ -72,9 +72,22 @@ function createMultipleNextEventEmbed(event) {
     );
     return embed;
 }
+function createHelpEmbed() { 
+    const embed = new Discord.MessageEmbed()
+    embed.setTitle('Commands')
+    embed.setColor(0x850c0c)
+    embed.setDescription(`All the available commands to date`)
+    embed.setFooter('Bot - When you are just 2Obli. ', 'attachment://Elephant.png')
+    embed.addFields(
+        { name: 'EVENT COMMANDS', value: ``, }
+    );
+    return embed;
+
+}
 
 module.exports = {
     createSingleEventEmbed,
     createDayScheduleEmbed,
-    createMultipleNextEventEmbed
+    createMultipleNextEventEmbed,
+    createHelpEmbed
 }

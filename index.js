@@ -6,9 +6,10 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = '!';
 const TOKEN = process.env.TOKEN;
+const TESTTOKEN= process.env.TESTTOKEN;
 
 
-client.login(TOKEN);
+client.login(TESTTOKEN);
 
 client.once('ready', () => {
   console.info(`Logged in as ${client.user.tag}!`);
@@ -30,9 +31,10 @@ client.on('message', message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/);
   const command = args.shift().toLowerCase();
   if (command === 'event') {
+    
     if (!args.length) {
-      return message.channel.send(`You did not provide any command arguments`)
-    } else if (args[0] === 'today') {
+      return message.channel.send("Not a valid command please type `!help` for current commands available");
+        } else if (args[0] === 'today') {
       var event = getEvents.getEventsEntireDay();
       embed = createEmbeddedMessages.createDayScheduleEmbed(event);
       if (embed != null) {
@@ -61,14 +63,15 @@ client.on('message', message => {
       }
 
 
+    } else if (command === 'help') {
+      if (!args.length) {
+        return message.channel.send("You did not provide any command arguments");
+      }
+      var embed = createEmbeddedMessages.createHelpEmbed();
+      return message.channel.send()
     }
-  } 
-  // else if (command === 'help') {
-  //   if (!args.length) {
-  //     return message.channel.send("You did not provide any command arguments");
-  //     var embed = 
-  //     return message.channel.send()
-  //   }
-  // }
+  } else{ 
+    return message.channel.send("Not a valid command please type `!help` for current commands available");
+  }
 });
 

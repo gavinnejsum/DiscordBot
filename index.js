@@ -23,8 +23,8 @@ client.on('message', message => {
   const command = args.shift().toLowerCase();
 
   if (command === 'event') {
-    args0 = args[0].toLowerCase();
     if (!args0.length) {
+      args0 = args[0].toLowerCase();
       return message.channel.send(`You did not provide any command arguments`)
     } else if (args0 === 'today') {
       var event = getEvents.getEventsEntireDay(currDayAndTime);

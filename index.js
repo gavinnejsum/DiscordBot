@@ -3,10 +3,13 @@ var getEvents = require('./getEvents.js');
 const createEmbeddedMessages = require('./createEmbeds.js');
 const editFunctions = require('./editFunctions.js');
 const Discord = require('discord.js');
+const dayjs = require('dayjs');
 const client = new Discord.Client();
 const prefix = '!';
 const TOKEN = process.env.TOKEN;
-const TESTTOKEN= process.env.TESTTOKEN;
+
+const TESTTOKEN = process.env.TESTTOKEN;
+
 
 
 client.login(TESTTOKEN);
@@ -15,62 +18,50 @@ client.once('ready', () => {
   console.info(`Logged in as ${client.user.tag}!`);
 });
 
-// client.on('message', message => {
-//   if (message.content === 'hello') {
-
-  
-//     message.author.send("Hello");
-
-//     // client.users.get("804383811630399498").send("Hi");
-//   }
-// });
-
 client.on('message', message => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
-
+  currDayAndTime = dayjs(message.createdTimestamp);
   const args = message.content.slice(prefix.length).trim().split(/ +/);
   const command = args.shift().toLowerCase();
+
   if (command === 'event') {
-    
+    args0 = args[0].toLowerCase();
     if (!args.length) {
       return message.channel.send("Not a valid command please type `!help` for current commands available");
-        } else if (args[0] === 'today') {
-      var event = getEvents.getEventsEntireDay();
+    } else if (args[0] === 'today') {
+      var event = getEvents.getEventsEntireDay(currDayAndTime);
+
       embed = createEmbeddedMessages.createDayScheduleEmbed(event);
       if (embed != null) {
         return message.channel.send(embed);
       } else {
         return message.channel.send("Error");
-      } ss
-    } else if (args[0] === 'next') {
+      }
+    } else if (args0 === 'next') {
       args.shift(); // remove next command from str arr
       var stringArgument = editFunctions.ArgumentToString(args); //convert arr to str
-      var returnMessage = getEvents.getNextEvent(stringArgument); //
+      var returnMessage = getEvents.getNextEvent(stringArgument, currDayAndTime); //
       if (returnMessage != null) {
         return message.channel.send(returnMessage);
       } else {
         return message.channel.send("Error");
       }
 
-    } else if (args[0] === 'list') {
+    } else if (args0 === 'list') {
       args.shift(); // remove next command from str arr
       var stringArgument = editFunctions.ArgumentToString(args); //convert arr to str
-      var returnMessage = getEvents.getListOfEvent(stringArgument); //
+      var returnMessage = getEvents.getListOfEvent(stringArgument, currDayAndTime) //
       if (returnMessage != null) {
         return message.channel.send(returnMessage);
       } else {
         return message.channel.send("Error");
       }
-
-
-    } else if (command === 'help') {
-      if (!args.length) {
-        return message.channel.send("You did not provide any command arguments");
-      }
-      var embed = createEmbeddedMessages.createHelpEmbed();
-      return message.channel.send()
     }
-  } else{ 
+  } else if (command === 'help' || command === 'commands') { 
+    return message.channel.send(createEmbeddedMessages.createHelpEmbed());
+  } else if (command === "cake") {
+    return message.channel.send("Everyone deserves some cake :cake:");
+  } else {
     return message.channel.send("Not a valid command please type `!help` for current commands available");
   }
 });

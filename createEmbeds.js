@@ -84,11 +84,13 @@ function createMultipleNextEventEmbed(event) {
 function createHelpEmbed() { 
     const embed = new Discord.MessageEmbed()
     embed.setTitle('Commands')
+    embed.attachFiles(['./Images/Elephant.png'])
     embed.setColor(0x850c0c)
     embed.setDescription(`All the available commands to date`)
-    embed.setFooter('Bot - When you are just 2Obli. ', 'attachment://Elephant.png')
+    embed.setFooter('Bot ', 'attachment://Elephant.png')
+    embed.setTimestamp()
     embed.addFields(
-        { name: 'EVENT COMMANDS', value: ``, }
+        { name: 'Event Commands', value: `All commands prefixed by \`!event\` \n\`\`\`yaml\nlist:\ntoday:\nnext: \`\`\` `, }
     );
     return embed;
 

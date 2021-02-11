@@ -26,7 +26,7 @@ client.on('message', message => {
 
   if (command === 'event') {
     if (!args.length) {
-      return message.channel.send("You did not specify the command \nNot a valid command. Type `!help` for current commands available")
+      return message.channel.send("You did not specify the command \nType `!help` for current commands available")
 
     }
     args0 = args[0].toLowerCase();
@@ -48,7 +48,7 @@ client.on('message', message => {
       if (returnMessage != null) {
         return message.channel.send(returnMessage);
       } else {
-        return message.channel.send("No event name listed. Please specify an event.\n\nType `!help` for additional help");
+        return message.channel.send("Invalid event name listed. Please try again.\n\nType `!help` for additional help");
       }
 
     } else if (args0 === 'list') {
@@ -58,7 +58,7 @@ client.on('message', message => {
       if (returnMessage != null) {
         return message.channel.send(returnMessage);
       } else {
-        return message.channel.send("No event name listed. Please specify an event.\n\nType `!help` for additional help");
+        return message.channel.send("Invalid event name listed. Please try again.\n\nType `!help` for additional help");
       }
     }
   } else if (command === 'help' || command === 'commands') {

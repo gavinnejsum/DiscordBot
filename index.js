@@ -27,6 +27,7 @@ client.on('message', message => {
   if (command === 'event') {
     if (!args.length) {
       return message.channel.send("You did not specify the command \nNot a valid command. Type `!help` for current commands available")
+
     }
     args0 = args[0].toLowerCase();
     if (!args.length) {

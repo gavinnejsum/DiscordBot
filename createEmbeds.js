@@ -39,7 +39,8 @@ function createSingleEventEmbed(event, timestampOfMessage) {
         embed.setThumbnail(`attachment://${editFunctions.removeSpacesBetweenWords(eventName)}.png`)
         embed.setColor(0x0f53d1)
         embed.setDescription('')
-        embed.setFooter(`Bot - All times  in UTC | sent ${timestampOfMessage.calendar()}`, 'attachment://Elephant.png')
+        embed.setFooter(`Bot - All times  in UTC`, 'attachment://Elephant.png')
+        embed.setTimestamp()
         embed.addFields(
             { name: `${eventName}`, value: `${eventData[0].info.eventDescription}` },
             { name: '\u200B', value: '\u200B' },
@@ -58,6 +59,7 @@ function createDayScheduleEmbed(event) {
     embed.setColor(0x0f53d1)
     embed.setDescription('Todays Events')
     embed.setFooter('Bot - All times  in UTC', 'attachment://Elephant.png')
+    embed.setTimestamp()
     embed.addFields(
         { name: '05:00', value: `\`\`\`${editFunctions.capitalizeFirstLetter(event[0].info.events[0][0])}\n${editFunctions.capitalizeFirstLetter(event[0].info.events[1][0])}\`\`\``, },
         { name: '11:00', value: `\`\`\`${editFunctions.capitalizeFirstLetter(event[0].info.events[0][1])}\n${editFunctions.capitalizeFirstLetter(event[0].info.events[1][1])}\`\`\``, },
@@ -76,6 +78,7 @@ function createMultipleNextEventEmbed(event) {
     embed.setColor(0x0f53d1)
     embed.setDescription(`List of coming ${eventName} events`)
     embed.setFooter('Bot - All times  in UTC', 'attachment://Elephant.png')
+    embed.setTimestamp()
     embed.addFields(
         { name: 'Date & times, value:', value: `\`\`\`${event[1]}\`\`\``, }
     );

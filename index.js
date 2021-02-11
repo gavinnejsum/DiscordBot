@@ -7,10 +7,12 @@ const dayjs = require('dayjs');
 const client = new Discord.Client();
 const prefix = '!';
 const TOKEN = process.env.TOKEN;
+
 const TESTTOKEN = process.env.TESTTOKEN;
 
 
-client.login(TOKEN);
+
+client.login(TEST);
 
 client.once('ready', () => {
   console.info(`Logged in as ${client.user.tag}!`);
@@ -24,13 +26,15 @@ client.on('message', message => {
 
   if (command === 'event') {
     if (!args.length) {
-      return message.channel.send(`You did not provide any command arguments`)
+      return message.channel.send("You did not specify the command \nNot a valid command. Type `!help` for current commands available")
+
     }
     args0 = args[0].toLowerCase();
-    if (!args0.length) {
-      return message.channel.send(`You did not provide any command arguments`)
-    } else if (args0 === 'today') {
+    if (!args.length) {
+      return message.channel.send("Not a valid command please type `!help` for current commands available");
+    } else if (args[0] === 'today') {
       var event = getEvents.getEventsEntireDay(currDayAndTime);
+
       embed = createEmbeddedMessages.createDayScheduleEmbed(event);
       if (embed != null) {
         return message.channel.send(embed);
@@ -44,7 +48,7 @@ client.on('message', message => {
       if (returnMessage != null) {
         return message.channel.send(returnMessage);
       } else {
-        return message.channel.send("Error");
+        return message.channel.send("No event name listed. Please specify an event.\n\nType `!help` for additional help");
       }
 
     } else if (args0 === 'list') {
@@ -54,20 +58,25 @@ client.on('message', message => {
       if (returnMessage != null) {
         return message.channel.send(returnMessage);
       } else {
-        return message.channel.send("Error");
+        return message.channel.send("No event name listed. Please specify an event.\n\nType `!help` for additional help");
       }
-
-
     }
+  } else if (command === 'help' || command === 'commands') {
+    // return message.channel.send(`All commands prefixed by \`!event\` \n\`\`\`yaml\n`+
+    // "list: Lists the occurrence for an event in the upcoming 2 rotations (which is around 20-25 days).\n"+
+    // "today: Lists all the events that will run during. The event starting times are 05:00, 11:00, 17:00, 23:00.\n"+
+    // "next: This one will give a short event description and give the time and date of the next occurrence of the event\n\n"+
+    
+    // "Examples:\n"+
+    // "!event next officer heroic : will show when the next officer recruit event will occur\n"+
+    // "!event today : Lists all event for today\n"+
+    // "!event list Research SLB : Will show all the upcoming times and dates for the research slb event for around 20-25 days\n"+
+    // `\`\`\``)
+    return message.channel.send(createEmbeddedMessages.createHelpEmbed());
   } else if (command === "cake") {
-    return message.channel.send("Everyone deserves some cake :cake:")
+    return message.channel.send("Everyone deserves some cake :cake:");
+  } else {
+    return message.channel.send("Not a valid command. Type `!help` for current commands available");
   }
-  // else if (command === 'help') {
-  //   if (!args.length) {
-  //     return message.channel.send("You did not provide any command arguments");
-  //     var embed = 
-  //     return message.channel.send()
-  //   }
-  // }
 });
 

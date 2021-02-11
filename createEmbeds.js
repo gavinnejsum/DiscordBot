@@ -101,7 +101,7 @@ function createHelpEmbed() {
         "Examples:\n"+
         "!event next officer heroic : will show when the next officer recruit event will occur\n\n"+
         "!event today : Lists all event for today\n\n"+
-        "!event list Research SLB : Will show all the upcoming times and dates for the research slb event for around 20-25 days\n\n"+
+        "!event list Research SLB : Will a list of times and dates for the research slb event \n\n"+
         `\`\`\``, },
         // {name: 'Misc Commands', value: "Test\n"+"```yaml\ntest: ddd\n```" } 
     );

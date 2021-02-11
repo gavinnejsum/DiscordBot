@@ -25,13 +25,12 @@ client.on('message', message => {
   const command = args.shift().toLowerCase();
 
   if (command === 'event') {
-    if (!args.length) {
-      return message.channel.send("You did not specify the command \nType `!help` for current commands available")
-
-    }
+  if (!args.length) {
+    return message.channel.send("No command specified.\n\nType `!help` for a list of current commands available");
+  }
     args0 = args[0].toLowerCase();
     if (!args.length) {
-      return message.channel.send("Not a valid command please type `!help` for current commands available");
+      return message.channel.send("No command specified.\n\nType `!help` for a list of current commands available");
     } else if (args[0] === 'today') {
       var event = getEvents.getEventsEntireDay(currDayAndTime);
 
@@ -60,6 +59,8 @@ client.on('message', message => {
       } else {
         return message.channel.send("Invalid event name listed. Please try again.\n\nType `!help` for additional help");
       }
+    } else { 
+      return message.channel.send("Not a valid command please type `!help` for current commands available");
     }
   } else if (command === 'help' || command === 'commands') {
     // return message.channel.send(`All commands prefixed by \`!event\` \n\`\`\`yaml\n`+
@@ -76,7 +77,7 @@ client.on('message', message => {
   } else if (command === "cake") {
     return message.channel.send("Everyone deserves some cake :cake:");
   } else {
-    return message.channel.send("Not a valid command. Type `!help` for current commands available");
+    return message.channel.send("No command specified.\n\n Type `!help` for current commands available");
   }
 });
 

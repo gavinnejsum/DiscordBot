@@ -38,8 +38,6 @@ function getNextEvent(eventName, currDay) {
     } else {
         currEventDay = dayDifference;
     }
-    console.log("day diff" + dayDifference)
-    console.log("curr event day" + currEventDay);
     var firstEventFound;
     var nextEventDay;
 

@@ -12,7 +12,7 @@ const TESTTOKEN = process.env.TESTTOKEN;
 
 
 
-client.login(TOKEN);
+client.login(TESTTOKEN);
 
 client.once('ready', () => {
   console.info(`Logged in as ${client.user.tag}!`);

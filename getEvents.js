@@ -32,9 +32,14 @@ function getNextEvent(eventName, currDay) {
     var currEventDay;
     if (dayDifference > 11) {  // if daydifference is bigger than 11 
         var currEventDay = dayDifference % 11;
+        if (currEventDay == 0) {
+            currEventDay = 11;
+        }
     } else {
         currEventDay = dayDifference;
     }
+    console.log("day diff" + dayDifference)
+    console.log("curr event day" + currEventDay);
     var firstEventFound;
     var nextEventDay;
 
@@ -145,6 +150,9 @@ function getListOfEvent(eventName, currDay) {
     var time;
     if (dayDifference > 11) {  // if daydifference is bigger than 11 
         var currEventDay = dayDifference % 11;
+        if (currEventDay == 0) {
+            currEventDay = 11;
+        }
     } else {
         currEventDay = dayDifference;
     }

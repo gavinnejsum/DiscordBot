@@ -54,6 +54,4 @@ function commandEvent(Discord, message, command, args) {
         }
     }
 }
-function commandHelp(Discord, message, command, args) {
-    return message.channel.send(createEmbeddedMessages.createHelpEmbed());
-}
+

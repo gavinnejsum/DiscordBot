@@ -96,7 +96,6 @@ function getNextEvent(eventName, currDay) {
         return createEmbeddedMessages.createSingleEventEmbed(firstEventFound, currDay);
     }
 }
-
 function lastDayScenario(foundData, currDay, eventName, currEventDay, nextEventDay) {
     var firstEventFound;
 
@@ -113,8 +112,6 @@ function lastDayScenario(foundData, currDay, eventName, currEventDay, nextEventD
     }
     return firstEventFound;
 }
-
-
 function getEventsEntireDay(currDay) {
 
     var dayDifference = currDay.diff(startDate, 'day') + 1; // finds daydifference to calculate current event day
@@ -134,7 +131,6 @@ function getEventsEntireDay(currDay) {
     });
     return foundData; // return embed instead of array
 }
-
 function getListOfEvent(eventName, currDay) {
 
     var dayDifference = currDay.diff(startDate, 'day') + 1; // finds daydifference to calculate current event day
@@ -198,7 +194,6 @@ function getListOfEvent(eventName, currDay) {
         return embed;
     }
 }
-
 module.exports = {
     getAllMatchingEvents,
     getNextEvent,

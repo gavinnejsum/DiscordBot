@@ -4,8 +4,10 @@ const { matchCommand } = require('./commands.js');
 const client = new Discord.Client();
 const prefix = '!';
 const TOKEN = process.env.TOKEN;
-
 const TESTTOKEN = process.env.TESTTOKEN;
+const TESTCHANNELID = process.env.TESTCHANNELID;
+const CHANNELID = process.env.CHANNELID;
+
 
 client.login(TESTTOKEN);
 
@@ -14,6 +16,7 @@ client.once('ready', () => {
 });
 
 client.on('message', function (message) {
+    if (!(message.channel.id.toString() === CHANNELID)) return; 
     if (message.author.bot) return;
     if (!message.content.startsWith(prefix)) return;
     if (message.channel instanceof Discord.DMChannel) return;

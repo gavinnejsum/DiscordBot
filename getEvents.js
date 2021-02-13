@@ -99,7 +99,6 @@ function getNextEvent(eventName, currDay) {
         return createEmbeddedMessages.createSingleEventEmbed(firstEventFound, currDay);
     }
 }
-
 function lastDayScenario(foundData, currDay, eventName, currEventDay, nextEventDay) {
     var firstEventFound;
 
@@ -116,8 +115,6 @@ function lastDayScenario(foundData, currDay, eventName, currEventDay, nextEventD
     }
     return firstEventFound;
 }
-
-
 function getEventsEntireDay(currDay) {
 
     var dayDifference = currDay.diff(startDate, 'day') + 1; // finds daydifference to calculate current event day
@@ -137,7 +134,6 @@ function getEventsEntireDay(currDay) {
     });
     return foundData; // return embed instead of array
 }
-
 function getListOfEvent(eventName, currDay) {
 
     var dayDifference = currDay.diff(startDate, 'day') + 1; // finds daydifference to calculate current event day
@@ -167,6 +163,7 @@ function getListOfEvent(eventName, currDay) {
         foundDataSecondRotation.forEach(element => {
             element.day = parseInt(element.day) + 11;
         });
+        
         foundDataAllRotation = foundDataFirstRotation.concat(foundDataSecondRotation);
         combinedData = updatedData.concat(foundDataAllRotation);
     }
@@ -189,13 +186,17 @@ function getListOfEvent(eventName, currDay) {
                 }
             } else if (combinedData[element].info.events[1].indexOf(eventName) != -1) {
                 for (let index = 0; index < combinedData[element].info.events[1].length; index++) {
-
                     if (combinedData[element].info.events[1][index] == eventName) {
                         if (returnString.length == 0) {
                             returnString += nextEventDay.format('MMMM Do YYYY') + " At: " + combinedData[element].info.time[index];
                         } else {
                             returnString += "\n" + nextEventDay.format('MMMM Do YYYY') + " At: " + combinedData[element].info.time[index];
+                            if(returnString.length > 200) {
+                                console.log("test")
+                                break; 
+                            }
                         }
+                        
                     }
                 }
             }
@@ -204,7 +205,6 @@ function getListOfEvent(eventName, currDay) {
         return embed;
     }
 }
-
 module.exports = {
     getAllMatchingEvents,
     getNextEvent,

@@ -1,7 +1,4 @@
 
-
-
-
 function isEventPassed(currTime, possibleTimes) {
     for (let element = 0; element < possibleTimes.length; element++) {
         if (parseInt(possibleTimes[element]) == 0) {

@@ -19,7 +19,7 @@ client.on('message', function (message) {
     if (!(message.channel.id.toString() === CHANNELID)) return; 
     if (message.author.bot) return;
     if (!message.content.startsWith(prefix)) return;
-    if (message.channel instanceof Discord.DMChannel) return;
+
 
     const args = message.content.slice(prefix.length).trim().split(/ +/);
     const command = args.shift().toLowerCase();

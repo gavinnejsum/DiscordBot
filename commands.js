@@ -21,7 +21,7 @@ module.exports = {
                 message.channel.send(createEmbeddedMessages.createHelpEmbed());
                 break;
             case 'cake':
-                message.channel.send("Everyone deserves some cake :cake:");
+               
                 commandCake(Discord, message, command, args)
                 break;
             default:
@@ -85,6 +85,8 @@ function commandCake(Discord, message, command, args) {
                 default:
                     return message.channel.send("default");
             }
+        } else { 
+            message.channel.send("Everyone deserves some cake :cake:");
         }
     }
 

@@ -7,22 +7,22 @@ module.exports = {
 
     matchCommand: function (Discord, message, command, args) {
         if (message.content.includes("cake")) {
-            command = 'cake'; 
+            command = 'cake';
         }
         switch (command) {
             case 'event':
             case 'events':
-            
+
                 commandEvent(Discord, message, command, args);
                 break;
             case 'help':
             case 'commands':
-            case '?': 
+            case '?':
                 message.channel.send(createEmbeddedMessages.createHelpEmbed());
                 break;
             case 'cake':
                 message.channel.send("Everyone deserves some cake :cake:");
-                commandCake(Discord, message, command, args)                
+                commandCake(Discord, message, command, args)
                 break;
             default:
                 message.channel.send("No command specified.\n\n Type `!help` for current commands available");
@@ -66,19 +66,27 @@ function commandEvent(Discord, message, command, args) {
         }
     }
 }
-function commandCake(Discord, message, command, args) { 
-        randomInt = Math.floor(Math.random()*1);
-        switch (randomInt) {
-            case 0:
-                return message.channel.send("\nFun cake fact: One of the biggest ever birthday cakes was almost as heavy as an elephant :elephant:")    
-            case 1: 
-            return message.channel.send("\nFun cake fact: One of the biggest ever birthday cakes was almost as heavy as an elephant :elephant:");
-            case 2:
-                return message.channel.send("Fun cake fact: Cake Test");
-        
-            default:
-                return message.channel.send("default");
+function commandCake(Discord, message, command, args) {
+    if (args.length > 0) {
+        if (message.content.includes('facts') || message.content.includes('fact')) {
+
+
+            randomInt = Math.floor(Math.random() * 4);
+            switch (randomInt) {
+                case 0:
+                    return message.channel.send("\nFun cake fact: One of the biggest ever birthday cakes was almost as heavy as an elephant :elephant:")
+                case 1:
+                    return message.channel.send("\nFun cake fact: The first birthday cake was originally a cake given as an offering on a person’s birthday. The first reference to ‘birthday cake’ came in 1785");
+                case 2:
+                    return message.channel.send("Fun cake fact: The word ‘cake’ comes from Middle English kake, and is probably a borrowing from Old Norse.");
+                case 3:
+                    return message.channel.send("Fun cake fact: In Swedish the word for cake is 'kaka' but the word 'tårta' is also used in the same way")
+                case 4: return message.channel.send("Fun cake fact: Queen Victoria was one of the first to have pure white icing on her wedding cake. That’s why it’s called “royal icing.")
+                default:
+                    return message.channel.send("default");
+            }
         }
+    }
 
 }
 

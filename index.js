@@ -9,7 +9,7 @@ const TESTCHANNELID = process.env.TESTCHANNELID;
 const CHANNELID = process.env.CHANNELID;
 
 
-client.login(TESTTOKEN);
+client.login(TOKEN);
 
 client.once('ready', () => {
     console.info(`Logged in as ${client.user.tag}!`);

@@ -95,13 +95,16 @@ function createHelpEmbed() {
     embed.addFields(
         { name: 'Event Commands', value: `All commands prefixed by \`!event\` \n\`\`\`yaml\n`+
         "list: Lists the occurrence for an event in the upcoming 2 rotations (which is around 20-25 days).\n\n"+
-        "today: Lists all the events that will run during. The event starting times are 05:00, 11:00, 17:00, 23:00.\n\n"+
+        "today: Lists all the events that will run today. The event starting times are 05:00, 11:00, 17:00, 23:00.\n\n"+
+        "tomorrow: Lists all the events that will be on tomorrow.\n\n"+
         "next: This one will give a short event description and give the time and date of the next occurrence of the event\n\n"+
         
+        
         "Examples:\n"+
-        "!event next officer heroic : will show when the next officer recruit event will occur\n\n"+
+        "!event next officer heroic : Will show when the next officer recruit event will occur\n\n"+
         "!event today : Lists all event for today\n\n"+
         "!event list Research SLB : Will a list of times and dates for the research slb event \n\n"+
+        "!event tomorrow: Lists all the events for tomorrow\n\n"+
         `\`\`\``, },
         // {name: 'Misc Commands', value: "Test\n"+"```yaml\ntest: ddd\n```" } 
     );

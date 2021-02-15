@@ -34,6 +34,14 @@ function commandEvent(Discord, message, command, args) {
     currDayAndTime = dayjs(message.createdTimestamp);
     if (args.length > 0) {
         switch (args[0].toLowerCase()) {
+            case 'in': 
+            args.shift();
+            var embed = createEmbeddedMessages.createDayScheduleEmbed(getEvents.getEventsEntireDay(currDayAndTime.add(args[0],'day')),currDayAndTime.add(args[0],'day'));
+            if (embed != null) {
+                return message.channel.send(embed);
+            } else {
+                return message.channel.send("Error");
+            }
             case'tomorrow': 
             args.shift();
             var embed = createEmbeddedMessages.createDayScheduleEmbed(getEvents.getEventsEntireDay(currDayAndTime.add(1, "day")), currDayAndTime.add(1,"day")); 

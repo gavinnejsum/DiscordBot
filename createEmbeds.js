@@ -50,14 +50,14 @@ function createSingleEventEmbed(event, timestampOfMessage) {
     }
     return null;
 }
-function createDayScheduleEmbed(event) {
+function createDayScheduleEmbed(event, date) {
 
     const embed = new Discord.MessageEmbed()
-    embed.setTitle('Daily Events')
+    embed.setTitle('Day Schedule')
     embed.attachFiles(['./Images/DailyEvents.png', './Images/Elephant.png'])
     embed.setThumbnail('attachment://DailyEvents.png')
     embed.setColor(0x0f53d1)
-    embed.setDescription('Todays Events')
+    embed.setDescription(`${date.format('MMMM Do YYYY')}`)
     embed.setFooter('Bot - All times  in UTC', 'attachment://Elephant.png')
     embed.setTimestamp()
     embed.addFields(

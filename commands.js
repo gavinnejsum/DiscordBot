@@ -12,7 +12,6 @@ module.exports = {
         switch (command) {
             case 'event':
             case 'events':
-
                 commandEvent(Discord, message, command, args);
                 break;
             case 'help':
@@ -35,6 +34,14 @@ function commandEvent(Discord, message, command, args) {
     currDayAndTime = dayjs(message.createdTimestamp);
     if (args.length > 0) {
         switch (args[0].toLowerCase()) {
+            case'tomorrow': 
+            args.shift();
+            var embed = createEmbeddedMessages.createDayScheduleEmbed(getEvents.getEventsEntireDay(currDayAndTime.add(1, "day")), currDayAndTime.add(1,"day")); 
+            if(embed != null) {
+                return message.channel.send(embed); 
+            } else { 
+                return message.channel.send("Error"); 
+            }
             case 'next':
             case 'first':
                 args.shift();
@@ -46,7 +53,7 @@ function commandEvent(Discord, message, command, args) {
                 }
             case 'today':
             case 'now':
-                embed = createEmbeddedMessages.createDayScheduleEmbed(getEvents.getEventsEntireDay(currDayAndTime));
+                embed = createEmbeddedMessages.createDayScheduleEmbed(getEvents.getEventsEntireDay(currDayAndTime), currDayAndTime);
                 if (embed != null) {
                     return message.channel.send(embed);
                 } else {
@@ -62,7 +69,7 @@ function commandEvent(Discord, message, command, args) {
                     return message.channel.send("Invalid event name listed. Please try again.\n\nType `!help` for additional help");
                 }
             default:
-                return message.channel.send("Invalid event name listed. Please try again.\n\nType `!help` for additional help");
+                return message.channel.send("Something went wrong, \nno command or a wrong command was entered. Please try again.\n\nType `!commands` for additional help");
         }
     }
 }

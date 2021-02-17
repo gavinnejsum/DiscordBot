@@ -77,7 +77,7 @@ function commandEvent(Discord, message, command, args) {
                     return message.channel.send("Invalid event name listed. Please try again.\n\nType `!help` for additional help");
                 }
             default:
-                return message.channel.send("Something went wrong, \nno command or a wrong command was entered. Please try again.\n\nType `!commands` for additional help");
+                return message.channel.send("Something went wrong, \nno event command or a wrong event command was entered. Please try again.\n\nType `!commands` for additional help");
         }
     }
 }

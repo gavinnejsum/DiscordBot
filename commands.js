@@ -79,6 +79,8 @@ function commandEvent(Discord, message, command, args) {
             default:
                 return message.channel.send("Something went wrong, \nno event command or a wrong event command was entered. Please try again.\n\nType `!commands` for additional help");
         }
+    } else {
+        return message.channel.send("Something went wrong, \nno event command or a wrong event command was entered. Please try again.\n\nType `!commands` for additional help");
     }
 }
 function commandCake(Discord, message, command, args) {

@@ -192,7 +192,7 @@ function getListOfEvent(eventName, currDay) {
                         } else {
                             returnString += "\n" + nextEventDay.format('MMMM Do YYYY') + " At: " + combinedData[element].info.time[index];
                             if(returnString.length > 200) {
-                                console.log("test")
+                                
                                 break; 
                             }
                         }

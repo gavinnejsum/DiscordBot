@@ -106,6 +106,9 @@ function commandCake(Discord, message, command, args) {
             message.channel.send("Everyone deserves some cake :cake:");
         }
     }
+    else { 
+        message.channel.send("Everyone deserves some cake :cake:");
+    }
 
 }
 

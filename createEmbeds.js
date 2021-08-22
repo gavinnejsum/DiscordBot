@@ -140,6 +140,7 @@ function createNamesEmbed() {
                 "Ship Upgrade SLB\n" +
                 "Station Upgrade\n" +
                 "Station Upgrade Big\n" +
+                "Station Upgrade Slb\n" +
                 `\`\`\``,
         }
     );

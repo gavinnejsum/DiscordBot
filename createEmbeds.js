@@ -127,6 +127,7 @@ function createNamesEmbed() {
     embed.addFields(
         {
             name: 'Event names', value: `\`\`\`` +
+                "Research\n" +
                 "Research SLB\n" +
                 "Research Big\n" +
                 "Officer Recruit\n" +

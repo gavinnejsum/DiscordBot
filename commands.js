@@ -68,7 +68,7 @@ function commandEvent(Discord, message, command, args) {
                 }
             case 'list':
             case 'all':
-                args.shift(); // remove next command from str arr
+                args.shift(); // remove list command from str arr
                 var embed = getEvents.getListOfEvent(editFunctions.ArgumentToString(args), currDayAndTime) //
                 if (embed != null) {
                     return message.channel.send(embed);

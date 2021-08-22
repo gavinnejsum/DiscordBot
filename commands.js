@@ -84,7 +84,13 @@ function commandEvent(Discord, message, command, args) {
                     return message.channel.send("Invalid event name listed. Please try again.\n\nType `!help` for additional help");
                 }
             default:
-                return message.channel.send("Something went wrong, \nno event command or a wrong event command was entered. Please try again.\n\nType `!commands` for additional help");
+                var embed = getEvents.getNextEvent(editFunctions.ArgumentToString(args), currDayAndTime);
+                if (embed != null) {
+                    return message.channel.send(embed);
+                } else {
+                    return message.channel.send("Invalid event name listed. Please try again.\n\nType `!help` for additional help");
+                }
+                //return message.channel.send("Something went wrong, \nno event command or a wrong event command was entered. Please try again.\n\nType `!commands` for additional help");
         }
     } else {
         return message.channel.send("Something went wrong, \nno event command or a wrong event command was entered. Please try again.\n\nType `!commands` for additional help");

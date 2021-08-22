@@ -102,7 +102,7 @@
         "EventName": "Ship Upgrade",
         "info": {
             "eventDuration" : "12",
-            "eventDescription": "**Use Materials** to upgrade your ships to gain strength for incoming challengers.",
+            "eventDescription": "**Use Materials** to upgrade your ships to gain strength for incoming challengers.\n\n**Note**: For players above operations level 40 the event will change. Instead of spending uncommon and rare materials it will change to spending uncommon ship parts.",
             "objectiveDescription": [
                 "G3 Materials on Ships",
                 "```1 G3 U Cry | 10 points\n1 G3 U Gas | 10 points\n1 G3 U Ore | 10 points\n1 G3 R Cry | 100 points\n1 G3 R Gas | 100 points\n1 G3 R Ore | 100 points\n```"
@@ -113,7 +113,7 @@
         "EventName": "Ship Upgrade Heroic",
         "info": {
             "eventDuration" : "6",
-            "eventDescription":"**Use Materials** to upgrade your ships to gain strength for incoming challengers.\nComplete this challenging Heroic event for grand rewards!",
+            "eventDescription":"**Use Materials** to upgrade your ships to gain strength for incoming challengers.\nComplete this challenging Heroic event for grand rewards!\n\n**Note**: For players above operations level 40 the event will change. Instead of spending uncommon and rare materials it will change to spending uncommon ship parts.",
             "objectiveDescription": [
                 "G3 Materials on Ships",
                 "```1 G3 U Cry | 10 points\n1 G3 U Gas | 10 points\n1 G3 U Ore | 10 points\n1 G3 R Cry | 100 points\n1 G3 R Gas | 100 points\n1 G3 R Ore | 100 points\n```"
@@ -124,7 +124,7 @@
         "EventName": "Ship Upgrade SLB",
         "info": {
             "eventDuration" : "6",
-            "eventDescription": "**Use Materials** to upgrade your ships to gain strength for incoming challengers.\nScore more than the opposition and grab the top prize!",
+            "eventDescription": "**Use Materials** to upgrade your ships to gain strength for incoming challengers.\nScore more than the opposition and grab the top prize!\n\n**Note**: For players above operations level 40 the event will change. Instead of spending uncommon and rare materials it will change to spending uncommon ship parts.",
             "objectiveDescription": [
                 "G3 Materials on Ships",
                 "```1 G3 U Cry | 10 points\n1 G3 U Gas | 10 points\n1 G3 U Ore | 10 points\n1 G3 R Cry | 100 points\n1 G3 R Gas | 100 points\n1 G3 R Ore | 100 points\n```"

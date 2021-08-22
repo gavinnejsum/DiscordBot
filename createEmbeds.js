@@ -126,7 +126,7 @@ function createNamesEmbed() {
     embed.setTimestamp()
     embed.addFields(
         {
-            name: 'Event names', value: `\`\`\`` +
+            name: 'Event names', value: `\`\`\`\n` +
                 "Research\n" +
                 "Research SLB\n" +
                 "Research Big\n" +

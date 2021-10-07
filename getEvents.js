@@ -13,7 +13,7 @@ dayjs.extend(timezone);
 // var testDay = new dayjs(new Date());
 // var testDay = dayjs('2021-02-04').hour(20);
 // getNextEvent("ship upgrade", testDay);
-var startDate = dayjs('2021-01-11');
+var startDate = dayjs('2021-10-06');
 
 function getAllMatchingEvents(eventName) {
 

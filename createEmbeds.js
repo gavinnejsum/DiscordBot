@@ -147,46 +147,11 @@ function createNamesEmbed() {
     );
     return embed;
 }
-const categories =  [
-    {
-        emoji: '1️⃣',
-        name: 'Today',
-        color: '#ff0000',
-        title: 'Help',
-        description: 'Below you can see the moderation commands.',
-        
-    },
-    {
-        emoji: '2️⃣',
-        name: 'Tomorrow',
-        color: '#ff0001',
-        title: 'Tomorrow',
-        description: 'Tomorrows Event',
-        
-    }
-]
-function reactionEmbed() { 
-    const embed = new Discord.MessageEmbed()
-        embed.setTitle('Daily Events')
-        embed.setDescription('React to chose what day you wanna see')
-        embed.addFields(
-        categories.map((cat) => ({
-        name:`${cat.emoji} ${cat.name}`,
-        value :'\u200b',
-
-        }))
-
-    )
-    return embed;
-}
-
-
 
 module.exports = {
     createSingleEventEmbed,
     createDayScheduleEmbed,
     createMultipleNextEventEmbed,
     createHelpEmbed,
-    createNamesEmbed,
-    reactionEmbed
+    createNamesEmbed
 }

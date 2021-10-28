@@ -124,3 +124,67 @@ function commandCake(Discord, message, command, args) {
 
 }
 
+const categories =  [
+    {
+        emoji: '1️⃣',
+        name: 'today',
+        
+    },
+    {
+        emoji:'2️⃣',
+        name: 'tomorrow',
+    }
+]
+function ReactionCommands(Discord, message, command, args) {
+                currDayAndTime = dayjs(message.createdTimestamp);
+                var embed = createEmbeddedMessages.reactionEmbed();
+                if(embed!= null) { 
+                    message.channel.send(embed).then((embedMsg) => {
+                        // send reactions for each emojis
+                        const emojis = categories.map((cat) => cat.emoji);
+                        emojis.forEach((emoji) => embedMsg.react(emoji));
+                        // the filter checks if the reaction emoji is in the categories
+                        // it also checks if the person who reacted shares the same id
+                        // as the author of the original message
+                        const filter = (reaction, user) =>
+                        emojis.includes(reaction.emoji.name) && user.id === message.author.id;
+                        const collector = embedMsg.createReactionCollector(filter, {
+                            // max number of reactions is the number of categories
+                            max: '1',
+                            // it won't accept reactions after 60 seconds
+                            // optional, you can remove/change it
+                            time: 20000,
+                        });
+                        collector.on('collect', (reaction, user) => {
+                            // find the category by its emoji
+                            const selectedCategory = categories.find(
+                                (category) => category.emoji === reaction.emoji.name,
+                                );
+                                if (!selectedCategory) {
+                                    return message.channel.send('Oops, there was an error... Try again?!');
+                                }
+                                
+                                commandEvent(Discord,message,command,[selectedCategory.name])
+                                embedMsg.delete()
+                              .catch(console.error);
+                        });
+                        collector.on('end', (collected, reason) => {
+                          // reactions are no longer collected
+                          // if the user clicked on every available emoji
+                          
+                            
+                  
+                          // if it's timeout
+                          if (reason === 'limit') { 
+                              return null;
+                        }
+
+                        return message.channel.send(`You took to long, so timing out, you gotta be faster next time ;)`);
+                        });
+                      });
+                    }
+                    
+}
+
+
+

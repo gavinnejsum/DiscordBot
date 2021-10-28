@@ -22,6 +22,9 @@ module.exports = {
             case 'cake':
                 commandCake(Discord, message, command, args)
                 break;
+            case 'reaction':
+                ReactionCommands(Discord,message,command,args);
+                break;
             default:
                 message.channel.send("No command specified.\n\n Type `!help` for current commands available");
         }

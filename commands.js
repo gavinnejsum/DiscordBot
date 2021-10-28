@@ -184,7 +184,6 @@ function ReactionCommands(Discord, message, command, args) {
                   
                           // if it's timeout
                           if (reason === 'limit') { 
-                              console.log("limit");
                               return null;
                         }
 

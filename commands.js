@@ -12,7 +12,6 @@ module.exports = {
         switch (command) {
             case 'event':
             case 'events':
-               
                 commandEvent(Discord, message, command, args);
                 break;
             case 'help':
@@ -23,9 +22,6 @@ module.exports = {
             case 'cake':
                 commandCake(Discord, message, command, args)
                 break;
-            case 'reaction':
-                ReactionCommands(Discord,message,command, args);
-                break;
             default:
                 message.channel.send("No command specified.\n\n Type `!help` for current commands available");
         }
@@ -33,12 +29,9 @@ module.exports = {
     },
 
 };
-
-
 function commandEvent(Discord, message, command, args) {
     currDayAndTime = dayjs(message.createdTimestamp);
     if (args.length > 0) {
-        
         switch (args[0].toLowerCase()) {
             case 'in':
                 args.shift();
@@ -67,7 +60,6 @@ function commandEvent(Discord, message, command, args) {
                 }
             case 'today':
             case 'now':
-               
                 embed = createEmbeddedMessages.createDayScheduleEmbed(getEvents.getEventsEntireDay(currDayAndTime), currDayAndTime);
                 if (embed != null) {
                     return message.channel.send(embed);
@@ -91,12 +83,11 @@ function commandEvent(Discord, message, command, args) {
                 } else {
                     return message.channel.send("Invalid event name listed. Please try again.\n\nType `!help` for additional help");
                 }
-                
             default:
-                return message.channel.send("22Something went wrong, \nno event command or a wrong event command was entered. Please try again.\n\nType `!commands` for additional help");
+                return message.channel.send("Something went wrong, \nno event command or a wrong event command was entered. Please try again.\n\nType `!commands` for additional help");
         }
     } else {
-        return message.channel.send("11Something went wrong, \nno event command or a wrong event command was entered. Please try again.\n\nType `!commands` for additional help");
+        return message.channel.send("Something went wrong, \nno event command or a wrong event command was entered. Please try again.\n\nType `!commands` for additional help");
     }
 }
 function commandCake(Discord, message, command, args) {
@@ -132,6 +123,7 @@ function commandCake(Discord, message, command, args) {
     }
 
 }
+
 const categories =  [
     {
         emoji: '1️⃣',
@@ -193,4 +185,6 @@ function ReactionCommands(Discord, message, command, args) {
                     }
                     
 }
+
+
 

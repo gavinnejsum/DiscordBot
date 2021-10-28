@@ -9,14 +9,14 @@ const TESTCHANNELID = process.env.TESTCHANNELID;
 const CHANNELID = process.env.CHANNELID;
 
 
-client.login(TOKEN);
+client.login(TESTTOKEN);
 
 client.once('ready', () => {
     console.info(`Logged in as ${client.user.tag}!`);
 });
 
 client.on('message', function (message) {
-    if (!(message.channel.id.toString() === CHANNELID)) return; 
+    if (!(message.channel.id.toString() === TESTCHANNELID)) return; 
     if (message.author.bot) return;
     if (!message.content.startsWith(prefix)) return;
 

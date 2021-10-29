@@ -146,7 +146,7 @@ emoji:'4️⃣',
 name:'Station upgrade',
 },
 {
-emoji:'5️⃣'
+emoji:'5️⃣',
 name: 'Research'
 }
 ]

@@ -130,13 +130,25 @@ function commandCake(Discord, message, command, args) {
 const categories =  [
     {
         emoji: '1️⃣',
-        name: 'today',
+        name: 'Officer XP',
         
     },
     {
         emoji:'2️⃣',
-        name: 'tomorrow',
-    }
+        name: 'Officer Recruit',
+    },
+    {
+        emoji:'3️⃣',
+        name:'Ship upgrade',
+},
+{
+emoji:'4️⃣',
+name:'Station upgrade
+},
+{
+emoji:'5️⃣'
+name: Research
+}
 ]
 function ReactionCommands(Discord, message, command, args) {
                 currDayAndTime = dayjs(message.createdTimestamp);
@@ -166,8 +178,8 @@ function ReactionCommands(Discord, message, command, args) {
                                 if (!selectedCategory) {
                                     return message.channel.send('Oops, there was an error... Try again?!');
                                 }
-                                
-                                commandEvent(Discord,message,command,[selectedCategory.name])
+                                commandEvent(Discord,message,command,["list",selectedCategory.name])
+                                //commandEvent(Discord,message,command,[selectedCategory.name])
                                 embedMsg.delete()
                               .catch(console.error);
                         });

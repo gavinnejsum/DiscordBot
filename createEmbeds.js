@@ -150,20 +150,41 @@ function createNamesEmbed() {
 const categories =  [
     {
         emoji: '1️⃣',
-        name: 'Today',
+        name: 'Officer XP',
         color: '#ff0000',
-        title: 'Help',
-        description: 'Below you can see the moderation commands.',
+        title: 'Officer XP',
+        description: 'Spend XP',
         
     },
     {
         emoji: '2️⃣',
-        name: 'Tomorrow',
+        name: 'Officer Recruit',
         color: '#ff0001',
         title: 'Tomorrow',
-        description: 'Tomorrows Event',
+        description: 'Recruit Officers',
         
-    }
+    },
+    {
+      emoji: '3️⃣',
+        name: 'Ship Upgrade',
+        color: '#ff0001',
+        title: 'Tomorrow',
+        description: 'Under Ops 40: spend UC materials upgrading ships. Over ops 40:Spend UC ship parts upgrading ships'  
+    },
+{ 
+emoji: '4️⃣',
+        name: 'Station Upgrade',
+        color: '#ff0001',
+        title: 'Station Upgrade',
+        description: 'Gain points by upgrading buildings'
+},
+{
+emoji: '5️⃣',
+        name: 'Research',
+        color: '#ff0001',
+        title: 'Research',
+        description: 'Gain points by completing research'
+}
 ]
 function reactionEmbed() { 
     const embed = new Discord.MessageEmbed()

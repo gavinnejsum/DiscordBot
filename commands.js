@@ -143,7 +143,7 @@ const categories =  [
 },
 {
 emoji:'4️⃣',
-name:'Station upgrade'
+name:'Station upgrade',
 },
 {
 emoji:'5️⃣'

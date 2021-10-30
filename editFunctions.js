@@ -12,7 +12,6 @@ function ArgumentToString(array) {
     });
     retString = retString.toLowerCase();
     retString = correctName(retString); 
-    //console.log(retString);
     return retString;
 }
 

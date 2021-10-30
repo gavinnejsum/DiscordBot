@@ -1,0 +1,41 @@
+[
+    { 
+        
+            "name": "Officer XP",
+            "emoji": "1️⃣",
+            "description": "Spend XP"
+           
+    },
+
+    {
+            "name": "Officer Recruit",
+            "emoji":"2️⃣",
+            "description": "Recruiting Officers"
+        
+    },
+    {
+        
+            "name":"Ship Upgrade",
+            "emoji":"3️⃣",
+            "description": "Under Ops 40: spend UC materials upgrading ships. \nOver ops 40:Spend UC ship parts"
+        
+    },
+    {
+        
+            
+            "name":"Station upgrade",
+            "emoji":"4️⃣",
+            "title": "Station Upgrade",
+            "description": "Upgrading buildings"
+        
+    },
+    {
+        
+            
+            "name": "Research",
+            "emoji":"5️⃣",
+            "title": "Research",
+            "description": "Completing research"
+        
+    }
+]

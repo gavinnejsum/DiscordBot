@@ -2,6 +2,8 @@ const Discord = require('discord.js');
 const editFunctions = require('./editFunctions.js');
 const getEventData = require('./getEventData');
 const dayjs = require('dayjs');
+const getCategories = require('./Commands/Reaction/categories.json');
+const getEventType = require('./Commands/Reaction/eventType.json');
 var advancedFormat = require('dayjs/plugin/advancedFormat');
 var utc = require('dayjs/plugin/utc');
 var timezone = require('dayjs/plugin/timezone');
@@ -147,53 +149,29 @@ function createNamesEmbed() {
     );
     return embed;
 }
-const categories =  [
-    {
-        emoji: '1️⃣',
-        name: 'Officer XP',
-        color: '#ff0000',
-        title: 'Officer XP',
-        description: 'Spend XP',
-        
-    },
-    {
-        emoji: '2️⃣',
-        name: 'Officer Recruit',
-        color: '#ff0001',
-        title: 'Tomorrow',
-        description: 'Recruit Officers',
-        
-    },
-    {
-      emoji: '3️⃣',
-        name: 'Ship Upgrade',
-        color: '#ff0001',
-        title: 'Tomorrow',
-        description: 'Under Ops 40: spend UC materials upgrading ships. Over ops 40:Spend UC ship parts upgrading ships'  
-    },
-{ 
-emoji: '4️⃣',
-        name: 'Station Upgrade',
-        color: '#ff0001',
-        title: 'Station Upgrade',
-        description: 'Gain points by upgrading buildings'
-},
-{
-emoji: '5️⃣',
-        name: 'Research',
-        color: '#ff0001',
-        title: 'Research',
-        description: 'Gain points by completing research'
-}
-]
-function reactionEmbed() { 
+
+function eventNameReaction() { 
     const embed = new Discord.MessageEmbed()
         embed.setTitle('Daily Events')
-        embed.setDescription('React to chose what day you wanna see')
+        embed.setDescription('React to choose what event you wanna see')
         embed.addFields(
-        categories.map((cat) => ({
+        getCategories.map((cat) => ({
         name:`${cat.emoji} ${cat.name}`,
-        value :'\u200b',
+        value :`${cat.description}`,
+
+        }))
+
+    )
+    return embed;
+}
+function eventTypeReaction() { 
+    const embed = new Discord.MessageEmbed()
+        embed.setTitle('Daily Events')
+        embed.setDescription('React to chose what type of event to see')
+        embed.addFields(
+        getEventType.map((cat) => ({
+        name:`${cat.emoji} ${cat.name}`,
+        value :`${cat.description}`,
 
         }))
 
@@ -207,5 +185,6 @@ module.exports = {
     createMultipleNextEventEmbed,
     createHelpEmbed,
     createNamesEmbed,
-    reactionEmbed
+    eventNameReaction,
+    eventTypeReaction
 }

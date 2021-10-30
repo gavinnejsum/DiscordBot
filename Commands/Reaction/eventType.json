@@ -1,0 +1,23 @@
+[
+    { 
+        "name": "SLB",
+        "type": "slb",
+        "emoji": "1️⃣",
+        "description": "Solo leaderboard event (6h)"
+            
+    },
+    {
+        "name": "Small",
+        "type": "small",
+        "emoji":"2️⃣",
+        "description": "Small event (12h)"
+    
+    },
+    {
+        "name":"Big or Heroic",
+        "type":"big",
+        "emoji":"3️⃣",
+        "description": "Big event (6h)"
+    }
+
+]

@@ -16,9 +16,7 @@ dayjs.extend(timezone);
 
 var startDate = dayjs('2021-10-05');
 
-
 function getAllMatchingEvents(eventName) {
-
     // Find all days with a matching event name
     foundData = eventData.filter(element => {
         // Find the element where info.events[0] or [1] contains an exactly matching string 
@@ -138,8 +136,8 @@ function getEventsEntireDay(currDay) {
     return foundData; // return embed instead of array
 }
 function getListOfEvent(eventName, currDay) {
-
     var dayDifference = currDay.diff(startDate, 'day') + 1; // finds daydifference to calculate current event day
+    
     var currEventDay;
     var combinedData;
     var nextEventDay;

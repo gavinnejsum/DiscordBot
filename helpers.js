@@ -21,7 +21,16 @@ function isEventPassed(currTime, possibleTimes) {
     }
     return returnTime;
 }
+function ifBigHeroic(eventName) {
+    eventName = eventName.toLowerCase();
+        if (eventName == "officer recruit" || eventName == "ship upgrade") { 
+            return true;
+        }
+        return false; 
+}
 
 module.exports = {
-    isEventPassed
+    isEventPassed,
+    ifBigHeroic
+
 }

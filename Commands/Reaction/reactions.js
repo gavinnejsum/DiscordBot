@@ -58,7 +58,7 @@ function chooseEventName(Discord, message, command, args) {
 
 function chooseEventType (Discord, message,command,args) { 
     
-    var embed = createEmbeddedMessages.eventTypeReaction();
+    var embed = createEmbeddedMessages.eventTypeReaction(args);
     if(embed!= null) { 
         message.channel.send(embed).then((embedTypeMsg) => {
             // send reactions for each emojis
@@ -78,6 +78,7 @@ function chooseEventType (Discord, message,command,args) {
             });
             collector.on('collect', (reaction, user) => {
                 // find the category by its emoji
+        
                 const selectedCategory = getEventType.find(
                     (category) => category.emoji === reaction.emoji.name,
                     );
@@ -85,15 +86,17 @@ function chooseEventType (Discord, message,command,args) {
                         return message.channel.send('Oops, there was an error... Try again?!');
                     }
                     eventNameAndType= args;
-                    if(selectedCategory.type != "small") 
+                    if(selectedCategory.type == "big") 
                     { 
                         if(helpers.ifBigHeroic(eventNameAndType)) { 
                             eventNameAndType+=" heroic";
                         } else { 
                             eventNameAndType+=" "+ selectedCategory.type;
                         }
+                    } else if(selectedCategory.type == "slb")
+                    {
+                        eventNameAndType+=" "+ selectedCategory.type;
                     }
-                   
                     events.commandEvent(Discord,message,command,["list",eventNameAndType])
                     embedTypeMsg.delete()
                   .catch(console.error);

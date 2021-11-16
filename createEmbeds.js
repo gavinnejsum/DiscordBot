@@ -164,9 +164,9 @@ function eventNameReaction() {
     )
     return embed;
 }
-function eventTypeReaction() { 
+function eventTypeReaction(eventName) { 
     const embed = new Discord.MessageEmbed()
-        embed.setTitle('Daily Events')
+        embed.setTitle(eventName)
         embed.setDescription('React to chose what type of event to see')
         embed.addFields(
         getEventType.map((cat) => ({

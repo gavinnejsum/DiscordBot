@@ -43,11 +43,17 @@ function commandEvent(Discord, message, command, args) {
         switch (args[0].toLowerCase()) {
             case 'in':
                 args.shift();
-                var embed = createEmbeddedMessages.createDayScheduleEmbed(getEvents.getEventsEntireDay(currDayAndTime.add(args[0], 'day')), currDayAndTime.add(args[0], 'day'));
-                if (embed != null) {
-                    return message.channel.send(embed);
-                } else {
-                    return message.channel.send("Error");
+                console.log(args);
+                if(args.length >0){ 
+                    var embed = createEmbeddedMessages.createDayScheduleEmbed(getEvents.getEventsEntireDay(currDayAndTime.add(args[0], 'day')), currDayAndTime.add(args[0], 'day'));
+                    if (embed != null) {
+                        return message.channel.send(embed);
+                    } else {
+                        return message.channel.send("Error");
+                    }
+                }
+                else{ 
+                    return message.channel.send("No number input, please try again");
                 }
             case 'tomorrow':
                 args.shift();

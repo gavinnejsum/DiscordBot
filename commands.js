@@ -28,7 +28,9 @@ module.exports = {
             case 'r':
                 reaction.chooseEventName(Discord, message, command, args);
             //ReactionCommands(Discord,message,command,args);
-                break;
+            case 'Officer':
+                createEmbeddedMessages.    
+            break;
             default:
                 message.channel.send("No command specified.\n\n Type `!help` for current commands available");
         }

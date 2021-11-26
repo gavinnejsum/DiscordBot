@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const officerData = require('officerData.json');
 const editFunctions = require('./editFunctions.js');
 const getEventData = require('./getEventData');
 const dayjs = require('dayjs');
@@ -178,6 +179,25 @@ function eventTypeReaction(eventName) {
     )
     return embed;
 }
+function CreateOfficerEmbed(input) {
+
+    const embed = new Discord.MessageEmbed()
+    embed.setTitle('Events')
+    embed.attachFiles([`./Images/DailyEvents.png`, './Images/Elephant.png'])
+    embed.setThumbnail(`attachment://DailyEvents.png`)
+    embed.setColor(0x0f53d1)
+    embed.setDescription(`Names of all the events in the rotation`)
+    embed.setFooter('Bot', 'attachment://Elephant.png')
+    embed.setTimestamp()
+    embed.addFields(
+        {
+            name: `${officerDat}`, value: `\`\`\`\n` +
+                
+        }
+    );
+    return embed;
+}
+
 
 module.exports = {
     createSingleEventEmbed,

@@ -1,0 +1,10 @@
+[
+  {
+    "Name": "Research",
+    "info": {
+      "CrewDescription": "```\n One of the most effective crews versus armadas, especially versus bigger armadas. It is effective because Five of Eleven will increase your mitigation making the armadas hits on you become considerably smaller Six of Eleven increases your penetration, decreasing the effectiveness of the armadas mitigation. He basically increases your overall damage versus the armada. Khan does what Khan does, he increases your critical hit chance every time you get hit by the armada which usually means in the last few rounds you will have a 100% critical hit chance. So all in all also increases your damage by a lot.```",
+      "CrewType": "Armadas",
+      "OfficerNames": [ "Six of Eleven", "Five of Eleven", "Khan"]
+    }
+  }
+]

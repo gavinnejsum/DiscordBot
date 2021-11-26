@@ -1,0 +1,32 @@
+[
+  {
+    "Name": "Armada",
+    "info": {
+      "CrewDescription": "One of the most effective crews versus armadas, especially versus bigger armadas. \n**Five of Eleven** will increase your mitigation making the armada do less damage on you. \n**Six of Eleven** increases your penetration, decreasing the effectiveness of the armadas mitigation, and increasing your overall damage versus the armada. \n**Khan** does what **Khan** does, so increases your damage by a lot.",
+      "CrewType": "Armadas",
+      "OfficerNames": [ "Six of Eleven", "Five of Eleven", "Khan"],
+      "StatPriority": "What stats to stack below Deck",
+      "Image": "Armada56Khan"
+    }
+  },
+  {
+    "Name": "Discovery",
+    "info": {
+      "CrewDescription": "For when you want to use your space Uber to summon ships",
+      "CrewType": "Discovery Summoning Crew",
+      "OfficerNames": [ "Saru", "Paul Stamets", "Hugh Culber"],
+      "StatPriority": "What stats to stack below Deck",
+      "Image": "DiscoverySporeJumpCrew"
+    }
+  },
+  {
+      "Name": "Borg Primary",
+      "info": {
+        "CrewDescription": "Primary Crew for higher tier Vi'Dars. ",
+        "CrewType": "Mudds Borg Crew",
+        "OfficerNames": [ "Ro Mudd", "Harry Fencourt Mudd", "Beverly Crusher"],
+        "StatPriority": "Stats do not have a bigger impact.\n Focus on getting 300% on Attack, Defense and Health",
+        "Image": "BorgPrimary"
+    }
+  }
+]

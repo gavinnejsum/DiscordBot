@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const officerData = require('officerData.json');
+
 const editFunctions = require('./editFunctions.js');
 const getEventData = require('./getEventData');
 const dayjs = require('dayjs');
@@ -36,7 +36,6 @@ function createSingleEventEmbed(event, timestampOfMessage) {
     if (eventData[0] != undefined) {
 
         const embed = new Discord.MessageEmbed()
-
         embed.setTitle(`Daily Event - ${eventData[0].info.eventDuration}h`)
         embed.attachFiles([`./Images/${editFunctions.removeSpacesBetweenWords(eventName)}.png`, './Images/Elephant.png'])
         embed.setThumbnail(`attachment://${editFunctions.removeSpacesBetweenWords(eventName)}.png`)
@@ -179,23 +178,28 @@ function eventTypeReaction(eventName) {
     )
     return embed;
 }
-function CreateOfficerEmbed(input) {
+function createOfficerEmbed(purpose) {
+    officerData = getEventData.findOfficerData(purpose);
+    if (officerData[0] != undefined) {  
 
     const embed = new Discord.MessageEmbed()
-    embed.setTitle('Events')
-    embed.attachFiles([`./Images/DailyEvents.png`, './Images/Elephant.png'])
-    embed.setThumbnail(`attachment://DailyEvents.png`)
+    embed.setTitle(`${officerData[0].info.CrewType}`)
+    embed.attachFiles([`./Images/${officerData[0].info.Image}.png`, './Images/Elephant.png'])
+    //embed.setThumbnail(`attachment://DiscoverySporeJumpCrew.png`)
     embed.setColor(0x0f53d1)
-    embed.setDescription(`Names of all the events in the rotation`)
+    embed.setDescription(`${officerData[0].info.CrewDescription}`)
     embed.setFooter('Bot', 'attachment://Elephant.png')
     embed.setTimestamp()
+    embed.setImage(`attachment://${officerData[0].info.Image}.png`)
     embed.addFields(
-        {
-            name: `${officerDat}`, value: `\`\`\`\n` +
-                
-        }
+        {name: `${officerData[0].info.OfficerNames[0]} - ${officerData[0].info.OfficerNames[1]} - ${officerData[0].info.OfficerNames[2]}`, value: `${officerData[0].info.CrewDescription}`, 
+        value: `${officerData[0].info.StatPriority}`
+    }       
+        
     );
     return embed;
+    }
+    return null; 
 }
 
 
@@ -206,5 +210,6 @@ module.exports = {
     createHelpEmbed,
     createNamesEmbed,
     eventNameReaction,
-    eventTypeReaction
+    eventTypeReaction,
+    createOfficerEmbed
 }

@@ -198,7 +198,7 @@ function createOfficerEmbed(purpose) {
     
     embed.addFields(
         {name: `${officerData[0].info.OfficerNames[0]} - ${officerData[0].info.OfficerNames[1]} - ${officerData[0].info.OfficerNames[2]}`, value: `${officerData[0].info.CrewDescription}`, 
-        value: `${defaultStatsString}\n${officerData[0].info.StatPriority}`
+        value: ` **Stat Priority:**${defaultStatsString}\n${officerData[0].info.StatPriority}`
     }       
         
     );

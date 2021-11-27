@@ -9,6 +9,7 @@ var advancedFormat = require('dayjs/plugin/advancedFormat');
 var utc = require('dayjs/plugin/utc');
 var timezone = require('dayjs/plugin/timezone');
 var calendar = require('dayjs/plugin/calendar');
+const defaultStatsString = "Try to max all bonus stats";
 dayjs.extend(advancedFormat);
 dayjs.extend(utc);
 dayjs.extend(timezone);
@@ -180,20 +181,24 @@ function eventTypeReaction(eventName) {
 }
 function createOfficerEmbed(purpose) {
     officerData = getEventData.findOfficerData(purpose);
+
     if (officerData[0] != undefined) {  
 
     const embed = new Discord.MessageEmbed()
     embed.setTitle(`${officerData[0].info.CrewType}`)
-    embed.attachFiles([`./Images/${officerData[0].info.Image}.png`, './Images/Elephant.png'])
-    //embed.setThumbnail(`attachment://DiscoverySporeJumpCrew.png`)
+    if(officerData[0].info.Image.length > 1) { 
+        embed.attachFiles([`./Images/${officerData[0].info.Image}.png`])
+        embed.setImage(`attachment://${officerData[0].info.Image}.png`)
+    }
+    embed.attachFiles('./Images/Elephant.png')
     embed.setColor(0x0f53d1)
     embed.setDescription(`${officerData[0].info.CrewDescription}`)
     embed.setFooter('Bot', 'attachment://Elephant.png')
     embed.setTimestamp()
-    embed.setImage(`attachment://${officerData[0].info.Image}.png`)
+    
     embed.addFields(
         {name: `${officerData[0].info.OfficerNames[0]} - ${officerData[0].info.OfficerNames[1]} - ${officerData[0].info.OfficerNames[2]}`, value: `${officerData[0].info.CrewDescription}`, 
-        value: `${officerData[0].info.StatPriority}`
+        value: `${defaultStatsString}\n${officerData[0].info.StatPriority}`
     }       
         
     );

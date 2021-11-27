@@ -106,6 +106,7 @@ function correctName(string) {
         case "station slb upgrade":
         case "slb station upgrade":
             return string = "station upgrade slb";
+    
         default:
             return string; 
     }

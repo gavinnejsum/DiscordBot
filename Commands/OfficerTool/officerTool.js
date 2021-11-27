@@ -92,6 +92,9 @@ function officerCommand(Discord, message, command, args) {
             case "heavies":
             case "heavy transports":
             case "ent heavy":
+            case "augur heavy": 
+            case "heavy transporters":
+            case "heavy transporter":
                 var embed = createEmbed.createOfficerEmbed("Heavy Transporters Enterprise");
                 var embed2 = createEmbed.createOfficerEmbed("Heavy Transporters Augur")
                 if (embed != null && embed !=null) {

@@ -1,0 +1,30 @@
+
+[
+        { 
+                "name": "Armada",
+                "emoji": "1️⃣"   
+        },
+    
+        {
+                "name": "Hostile Primary",
+                "emoji":"2️⃣"
+        },
+        {
+            
+                "name":"Hostile Alternative 1",
+                "emoji":"3️⃣"        
+        },
+        {
+            
+                
+                "name":"Hostile Alternative 2",
+                "emoji":"4️⃣"
+            
+        },
+        {
+                "name": "Hostile level 29 ",
+                "emoji":"5️⃣"
+        
+        }
+    ]
+    

@@ -28,6 +28,10 @@ module.exports = {
                 reaction.chooseEventName(Discord, message, command, args);
             //ReactionCommands(Discord,message,command,args);
             case 'officer':
+            case 'officers':
+            case 'crews':
+            case 'crew':
+            case 'o':
                 officerTool.officerCommand(Discord, message, command, args);
                 
             break;

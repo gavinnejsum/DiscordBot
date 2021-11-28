@@ -71,8 +71,8 @@ const createEmbeddedMessages = require('../../createEmbeds.js');
                            .catch(console.error);
                             return message.channel.send('Oops, there was an error... Try again?!');
                         }
-                    //     embedTypeMsg.delete()
-                    //   .catch(console.error);
+                            embedTypeMsg.delete()
+                            .catch(console.error);
                 });
                 collector.on('end', (collected, reason) => {
                   // reactions are no longer collected

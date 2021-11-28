@@ -3,22 +3,22 @@
     { 
             "name": "Armada",
             "emoji": "1️⃣",
-            "value": "Test"
+            "crew": "Six of Eleven - Five of Eleven - Khan" 
     },
     {
             "name": "Hostile Primary",
             "emoji":"2️⃣",
-            "value": "Test"
+            "crew": "Ro Mudd -Harry Fencourt Mudd - Beverly Crusher" 
     },
     {
             "name":"Hostile Alternative 1",
             "emoji":"3️⃣" ,
-            "value": "Test"       
+            "crew": "Moreau - Pike - Tlan"   
     },
     {
             "name": "Hostile level 29",
             "emoji":"4️⃣",
-            "value": "Test"
+            "crew": "Moreau - Pike - Chen" 
     
     }
 ]

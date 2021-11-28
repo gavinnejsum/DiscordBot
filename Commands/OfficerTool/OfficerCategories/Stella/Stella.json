@@ -2,19 +2,23 @@
 [
     { 
         "name": "Armada",
-        "emoji": "1️⃣"
+        "emoji": "1️⃣",
+        "crew": "Spock - Kirk - Khan" 
     },
     
     {
         "name": "Armada Solo",
-        "emoji":"2️⃣"
+        "emoji":"2️⃣",
+        "crew": "Spock - Leslie - Kirk" 
     },
     {
         "name": "Primary Hostile Crew",
-        "emoji":"3️⃣"
+        "emoji":"3️⃣",
+        "crew": "Moreau - Pike - Chen" 
     },
     {
         "name":"Hostile Loot Crew",
-        "emoji":"4️⃣"        
+        "emoji":"4️⃣",
+        "crew": "Stonn - Two of Eleven - Four of Eleven" 
     }
 ]

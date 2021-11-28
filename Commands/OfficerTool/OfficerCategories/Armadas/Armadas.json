@@ -1,22 +1,27 @@
 [
     { 
         "name": "Normal",
-        "emoji": "1️⃣"   
+        "emoji": "1️⃣",
+        "crew": "Six of Eleven - Five of Eleven - Khan" 
     },
     {
         "name": "Morale",
-        "emoji":"2️⃣"
+        "emoji":"2️⃣",
+        "crew": "Spock - Kirk - Khan" 
     },
     {
         "name": "Borg",
-        "emoji":"3️⃣"        
+        "emoji":"3️⃣",
+        "crew": "Six of Eleven - Five of Eleven - Khan" 
     },
     {
         "name":"Stella",
-        "emoji":"4️⃣"    
+        "emoji":"4️⃣",
+        "crew": "Spock - Kirk - Khan" 
     },
     {
         "name":"Swarms",
-        "emoji":"5️⃣"
+        "emoji":"5️⃣",
+        "crew": "Six of Eleven - Five of Eleven - Khan" 
     }
 ]

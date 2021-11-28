@@ -1,4 +1,9 @@
 const getCategories = require('./categories.json');
+const officerTool = require('../OfficerTool/officerTool.js')
+const borgCategory = require('../OfficerTool/OfficerCategories/Borg/Borg.json');
+const stellaCategory = require('../OfficerTool/OfficerCategories/Stella/Stella.json');
+const armadaCategory = require('../OfficerTool/OfficerCategories/Armadas/Armadas.json');
+const swarmCategory = require('../OfficerTool/OfficerCategories/Swarms/Swarms.json');
 const getEventType = require('./eventType.json')
 const createEmbeddedMessages = require('../../createEmbeds.js');
 const events = require('../Events/events');
@@ -11,6 +16,7 @@ function chooseEventName(Discord, message, command, args) {
         message.channel.send(embed).then((embedMsg) => {
             // send reactions for each emojis
             const emojis = getCategories.map((cat) => cat.emoji);
+  
             emojis.forEach((emoji) => embedMsg.react(emoji));
             // the filter checks if the reaction emoji is in the categories
             // it also checks if the person who reacted shares the same id
@@ -29,6 +35,7 @@ function chooseEventName(Discord, message, command, args) {
                 const selectedCategory = getCategories.find(
                     (category) => category.emoji === reaction.emoji.name,
                     );
+  
                     if (!selectedCategory) {
                         return message.channel.send('Oops, there was an error... Try again?!');
                     }
@@ -55,9 +62,7 @@ function chooseEventName(Discord, message, command, args) {
         }
         
 }
-
 function chooseEventType (Discord, message,command,args) { 
-    
     var embed = createEmbeddedMessages.eventTypeReaction(args);
     if(embed!= null) { 
         message.channel.send(embed).then((embedTypeMsg) => {
@@ -108,25 +113,13 @@ function chooseEventType (Discord, message,command,args) {
               if (reason === 'limit') { 
                   return null;
             }
-
             return message.channel.send(`You took to long, so timing out, you gotta be faster next time ;)`);
             });
-          });
-        }
-        
+        });
+    }
 }
+
 module.exports = {
     chooseEventName,
-    chooseEventType
+    chooseEventType,
 }
-
-function findEventName(EventName) { 
-    foundData = getCategories.filter(element => {
-        // Find the element where info.events[0] or [1] contains an exactly matching string 
-        if (element.EventName == EventName) {
-            return element;
-        }
-    });
-}
-
-findEventName("Research");

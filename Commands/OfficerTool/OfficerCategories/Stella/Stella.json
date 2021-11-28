@@ -2,7 +2,7 @@
 [
     { 
         "name": "Armada",
-        "emoji": "1️⃣"   
+        "emoji": "1️⃣"
     },
     
     {
@@ -10,7 +10,11 @@
         "emoji":"2️⃣"
     },
     {
+        "name": "Primary Hostile Crew",
+        "emoji":"3️⃣"
+    },
+    {
         "name":"Hostile Loot Crew",
-        "emoji":"3️⃣"        
+        "emoji":"4️⃣"        
     }
 ]

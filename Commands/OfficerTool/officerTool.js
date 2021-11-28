@@ -1,14 +1,19 @@
 const createEmbed = require('../../createEmbeds');
 const editFunctions = require('../../editFunctions.js');
-
-
+const officerReaction = require ('./officerReaction');
 
 function officerCommand(Discord, message, command, args) {
     if(args.length > 0)
-    { 
-        input = editFunctions.ArgumentToString(args);
+    {
+        if(Array.isArray(args)) {
+            input = editFunctions.ArgumentToString(args);
+        }
         switch (input) {
-            case "armada":                
+            case "armada":
+                officerReaction.chooseType(Discord, message, command, args);
+                break; 
+            case "normal armada":
+            case "armada normal":                
                 var embed2 = createEmbed.createOfficerEmbed("Armada Morale");
                 var embed = createEmbed.createOfficerEmbed("Armada 5");
                 if (embed != null) {
@@ -17,10 +22,8 @@ function officerCommand(Discord, message, command, args) {
                 } else {
                     return message.channel.send("Error");
                 }
-                
             case "discovery":
             case "disco":
-               
                 var embed = createEmbed.createOfficerEmbed("Discovery");
                 if (embed != null) {
                     return message.channel.send(embed);
@@ -28,6 +31,8 @@ function officerCommand(Discord, message, command, args) {
                     return message.channel.send("Error");
                 }
             case "borg":
+                officerReaction.chooseType(Discord, message, command, args);
+                break;
             case "primary borg":
             case "borg primary":
             case "best borg":
@@ -56,6 +61,8 @@ function officerCommand(Discord, message, command, args) {
                 }
             case "swarm":
             case "swarms":
+                officerReaction.chooseType(Discord, message, command, args);
+                break;
             case "swarm primary":
                 var embed = createEmbed.createOfficerEmbed("Swarms Primary");
                 if (embed != null) {
@@ -82,7 +89,6 @@ function officerCommand(Discord, message, command, args) {
                 }
             case "para bellum":
             case "pb":
-            
                 var embed = createEmbed.createOfficerEmbed("Para Bellum");
                 if (embed != null) {
                     return message.channel.send(embed);
@@ -103,6 +109,9 @@ function officerCommand(Discord, message, command, args) {
                 } else {
                     return message.channel.send("Error");
                 }
+            case "stella": 
+               officerReaction.chooseType(Discord, message, command, args);
+                break;
             case "stella armada":
             case "armada stella":
                 var embed = createEmbed.createOfficerEmbed("Stella Solo Armadas");
@@ -114,18 +123,13 @@ function officerCommand(Discord, message, command, args) {
                     return message.channel.send("Error");
                 }
             default:
-                return message.channel.send("Name Error");
+                return message.channel.send("Officer Tool | Name Error");
                 
         }
 
     }
-
-
-
 }
 
-
-
 module.exports = { 
-    officerCommand
+    officerCommand,
 }

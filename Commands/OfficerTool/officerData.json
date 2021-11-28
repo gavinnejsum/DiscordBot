@@ -71,6 +71,17 @@
   }
 },
 {
+  "Name": "Borg Level 29 Hostiles",
+  "info": {
+    "CrewType": "Borg Hostiles",
+    "OfficerNames": ["Moreau", "Pike", "Chen"],
+    "CrewDescription":"A crew for level 29 Borg hostiles, Tier 6 or above Vi'Dar recommended.",
+    "StatPriority": "Try to max all bonus stats",
+    "Image": "PikeMoreauChen"
+  }
+},
+
+{
   "Name": "Swarms Primary",
   "info": {
     "CrewType": "Swarm Hostiles",
@@ -90,7 +101,16 @@
     "Image": "JaylahBeverlyKang"
   }
 },
-
+{
+  "Name": "Swarms Tertiary",
+  "info": {
+    "CrewType": "Swarm Hostiles",
+    "OfficerNames": ["Moreau", "Pike", "Jaylah (not Borg)"],
+    "CrewDescription":"Alternative Swarm hostile crew. ",
+    "StatPriority": "",
+    "Image": "PikeMoreauJaylah"
+  }
+},
 {
   "Name": "Swarm Armada",
   "info": {
@@ -149,6 +169,26 @@
       "CrewDescription":"Your stock standard basic morale crew for Stellas",
       "StatPriority": "Defense",
       "Image": "ArmadaMoraleKhan"
+    }
+  },
+  {
+    "Name": "Stella Primary Hostile",
+    "info": {
+      "CrewType": "Eclipse Hostiles",
+      "OfficerNames": ["Moreau", "Pike", "Chen"],
+      "CrewDescription":"Default crew for hitting Eclipses",
+      "StatPriority": "",
+      "Image": "PikeMoreauChen"
+    }
+  },
+  {
+    "Name": "Stella Max Loot",
+    "info": {
+      "CrewType": "Eclipse Hostiles",
+      "OfficerNames": ["Stonn","Two of Eleven","Four of Eleven"],
+      "CrewDescription":"Stella crew for added cargo, you will die quicker, and can't kill as many high lvl hostiles. But you can carry more total loot.",
+      "StatPriority": "",
+      "Image": ""
     }
   },
   {

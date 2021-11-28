@@ -30,13 +30,6 @@ function capitalizeFirstLetter(str) {
 
     return splitString.join(" ");
 }
-function placeHolderName(str) { 
-    var splitString = str.split(" "); 
-
-    for (let i = 0; i <splitString.length; i++) {
-        
-    }
-}
 
 function removeSpacesBetweenWords(str) {
     var splitStr = str.split(" ");

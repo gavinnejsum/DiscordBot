@@ -186,7 +186,7 @@ function officerTypeReaction(eventName) {
     const embed = new Discord.MessageEmbed()
     eventNameCopy= eventName[0].toUpperCase() + eventName.slice(1);
         embed.setTitle(eventNameCopy)
-        embed.setDescription('React to chose what type of event to see')
+        embed.setDescription('React to chose what Crew type you are looking for :)')
         switch (eventName.toString()) {
             case "borg":
                 embed.addFields(

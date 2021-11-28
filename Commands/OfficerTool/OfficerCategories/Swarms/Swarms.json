@@ -2,23 +2,27 @@
 [
         { 
                 "name": "Armada",
-                "emoji": "1️⃣"   
+                "emoji": "1️⃣",
+                "crew": "Six of Eleven - Five of Eleven - Khan" 
         },
     
         {
                 "name": "Hostile Primary",
-                "emoji":"2️⃣"
+                "emoji":"2️⃣",
+                "crew": "Moreau - Pike - Tlan" 
         },
         {
             
                 "name":"Hostile Alternative 1",
-                "emoji":"3️⃣"        
+                "emoji":"3️⃣",
+                "crew": "Jaylah - Beverly - Kang"        
         },
         {
             
                 
                 "name":"Hostile Alternative 2",
-                "emoji":"4️⃣"
+                "emoji":"4️⃣",
+                "crew": "Moreau - Pike - Jaylah" 
             
         }
     ]

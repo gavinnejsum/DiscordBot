@@ -192,7 +192,7 @@ function officerTypeReaction(eventName) {
                 embed.addFields(
                     borgCategory.map((cat) => ({
                     name:`${cat.emoji} ${cat.name}`,
-                    value:`${cat.value}`,  
+                    value:`${cat.crew}`,  
                     }))
                 )
                 break;
@@ -201,7 +201,7 @@ function officerTypeReaction(eventName) {
                 embed.addFields(
                     swarmCategory.map((cat) => ({
                     name:`${cat.emoji} ${cat.name}`,
-                    value:`${cat.value}`,  
+                    value:`${cat.crew}`,
                     }))
                 )
                 break;
@@ -209,7 +209,7 @@ function officerTypeReaction(eventName) {
                 embed.addFields(
                     stellaCategory.map((cat) => ({
                     name:`${cat.emoji} ${cat.name}`,
-                    value:`${cat.value}`,  
+                    value:`${cat.crew}`,
                     }))
                 )
                 break;
@@ -217,7 +217,7 @@ function officerTypeReaction(eventName) {
                 embed.addFields(
                     armadaCategory.map((cat) => ({
                     name:`${cat.emoji} ${cat.name}`,
-                    value:`${cat.value}`,  
+                    value:`${cat.crew}`,
                     }))
                 )
                 break; 

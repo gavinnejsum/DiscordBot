@@ -1,0 +1,22 @@
+[
+    { 
+        "name": "Normal",
+        "emoji": "1️⃣"   
+    },
+    {
+        "name": "Morale",
+        "emoji":"2️⃣"
+    },
+    {
+        "name": "Borg",
+        "emoji":"3️⃣"        
+    },
+    {
+        "name":"Stella",
+        "emoji":"4️⃣"    
+    },
+    {
+        "name":"Swarms",
+        "emoji":"5️⃣"
+    }
+]

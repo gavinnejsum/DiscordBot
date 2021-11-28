@@ -26,17 +26,16 @@ module.exports = {
                 break;
             case 'r':
                 reaction.chooseEventName(Discord, message, command, args);
-            //ReactionCommands(Discord,message,command,args);
+                break;
             case 'officer':
             case 'officers':
             case 'crews':
             case 'crew':
             case 'o':
                 officerTool.officerCommand(Discord, message, command, args);
-                
-            break;
+                break;
             default:
-                message.channel.send("No command specified.\n\n Type `!help` for current commands available");
+                message.channel.send("No command specified.\n Type `!help` for current commands available");
         }
 
     }

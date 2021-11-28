@@ -1,0 +1,20 @@
+
+[
+    { 
+        "name": "Armada",
+        "emoji": "1️⃣"
+    },
+    
+    {
+        "name": "Armada Solo",
+        "emoji":"2️⃣"
+    },
+    {
+        "name": "Primary Hostile Crew",
+        "emoji":"3️⃣"
+    },
+    {
+        "name":"Hostile Loot Crew",
+        "emoji":"4️⃣"        
+    }
+]

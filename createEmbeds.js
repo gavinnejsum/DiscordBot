@@ -1,4 +1,8 @@
 const Discord = require('discord.js');
+const borgCategory = require('./Commands/OfficerTool/OfficerCategories/Borg/Borg.json')
+const stellaCategory = require('./Commands/OfficerTool/OfficerCategories/Stella/Stella.json');
+const armadaCategory = require('./Commands/OfficerTool/OfficerCategories/Armadas/Armadas.json');
+const swarmCategory = require('./Commands/OfficerTool/OfficerCategories/Swarms/Swarms.json');
 
 const editFunctions = require('./editFunctions.js');
 const getEventData = require('./getEventData');
@@ -173,10 +177,53 @@ function eventTypeReaction(eventName) {
         getEventType.map((cat) => ({
         name:`${cat.emoji} ${cat.name}`,
         value :`${cat.description}`,
-
         }))
-
     )
+    return embed;
+    }
+
+function officerTypeReaction(eventName) { 
+    const embed = new Discord.MessageEmbed()
+    eventNameCopy= eventName[0].toUpperCase() + eventName.slice(1);
+        embed.setTitle(eventNameCopy)
+        embed.setDescription('React to chose what type of event to see')
+        switch (eventName.toString()) {
+            case "borg":
+                embed.addFields(
+                    borgCategory.map((cat) => ({
+                    name:`${cat.emoji} ${cat.name}`,
+                    value:`${cat.value}`,  
+                    }))
+                )
+                break;
+            case "swarm":
+            case "swarms":
+                embed.addFields(
+                    swarmCategory.map((cat) => ({
+                    name:`${cat.emoji} ${cat.name}`,
+                    value:`${cat.value}`,  
+                    }))
+                )
+                break;
+            case "stella":
+                embed.addFields(
+                    stellaCategory.map((cat) => ({
+                    name:`${cat.emoji} ${cat.name}`,
+                    value:`${cat.value}`,  
+                    }))
+                )
+                break;
+            case "armada":
+                embed.addFields(
+                    armadaCategory.map((cat) => ({
+                    name:`${cat.emoji} ${cat.name}`,
+                    value:`${cat.value}`,  
+                    }))
+                )
+                break; 
+            default:
+                return "ERROR | choseCrewType SwitchCase";
+        }
     return embed;
 }
 function createOfficerEmbed(purpose) {
@@ -215,6 +262,8 @@ module.exports = {
     createHelpEmbed,
     createNamesEmbed,
     eventNameReaction,
-    eventTypeReaction,
-    createOfficerEmbed
+    officerTypeReaction,
+    createOfficerEmbed,
+    eventTypeReaction
+    
 }

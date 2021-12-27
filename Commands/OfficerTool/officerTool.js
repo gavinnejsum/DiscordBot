@@ -12,6 +12,36 @@ function officerCommand(Discord, message, command, args) {
             case "armada":
                 officerReaction.chooseType(Discord, message, command, args);
                 break; 
+            case "borg":
+                officerReaction.chooseType(Discord, message, command, args);
+                break;
+            case "disco":
+                officerReaction.chooseType(Discord, message, command, args);
+                break;
+            case "swarms":
+                officerReaction.chooseType(Discord, message, command, args);
+                break;
+            case "stella": 
+                officerReaction.chooseType(Discord, message, command, args);
+                break;
+            case "ent":
+            case "enterprise":
+            case "enterprise pvp":
+            case "pvp enterprise": 
+            case "ent pvp":
+            case "pvp ent":
+                officerReaction.chooseType(Discord, message, command, "enterprise");
+                break;
+            case "augur":
+            case "augur pvp":
+            case "pvp augur":
+                officerReaction.chooseType(Discord, message, command, "augur");
+                break;
+            case "d4": 
+            case "d4 pvp":
+            case "pvp d4":
+            officerReaction.chooseType(Discord, message, command, "d4");
+                break;
             case "normal armada":
             case "armada normal":                
                 var embed2 = createEmbed.createOfficerEmbed("Armada Morale");
@@ -23,16 +53,6 @@ function officerCommand(Discord, message, command, args) {
                     return message.channel.send("Error");
                 }
             case "discovery":
-            case "disco":
-                var embed = createEmbed.createOfficerEmbed("Discovery");
-                if (embed != null) {
-                    return message.channel.send(embed);
-                } else {
-                    return message.channel.send("Error");
-                }
-            case "borg":
-                officerReaction.chooseType(Discord, message, command, args);
-                break;
             case "primary borg":
             case "borg primary":
             case "best borg":
@@ -60,9 +80,6 @@ function officerCommand(Discord, message, command, args) {
                     return message.channel.send("Error");
                 }
             case "swarm":
-            case "swarms":
-                officerReaction.chooseType(Discord, message, command, args);
-                break;
             case "swarm primary":
                 var embed = createEmbed.createOfficerEmbed("Swarms Primary");
                 if (embed != null) {
@@ -109,9 +126,7 @@ function officerCommand(Discord, message, command, args) {
                 } else {
                     return message.channel.send("Error");
                 }
-            case "stella": 
-               officerReaction.chooseType(Discord, message, command, args);
-                break;
+           
             case "stella armada":
             case "armada stella":
                 var embed = createEmbed.createOfficerEmbed("Stella Solo Armadas");

@@ -69,58 +69,58 @@
       "StatPriority": "",
       "Image": "PikeMoreauTlan"
   }
-},
-{
-  "Name": "Borg Level 29 Hostiles",
-  "info": {
-    "CrewType": "Borg Hostiles",
-    "OfficerNames": ["Moreau", "Pike", "Chen"],
-    "CrewDescription":"A crew for level 29 Borg hostiles, Tier 6 or above Vi'Dar recommended.",
-    "StatPriority": "Try to max all bonus stats",
-    "Image": "PikeMoreauChen"
-  }
-},
+  },
+  {
+    "Name": "Borg Level 29 Hostiles",
+    "info": {
+      "CrewType": "Borg Hostiles",
+      "OfficerNames": ["Moreau", "Pike", "Chen"],
+      "CrewDescription":"A crew for level 29 Borg hostiles, Tier 6 or above Vi'Dar recommended.",
+      "StatPriority": "Try to max all bonus stats",
+      "Image": "PikeMoreauChen"
+    }
+  },
 
-{
-  "Name": "Swarms Primary",
-  "info": {
-    "CrewType": "Swarm Hostiles",
-    "OfficerNames": ["Moreau", "Pike", "Tlan"],
-    "CrewDescription":"Default swarm crew before Jaylah is available.",
-    "StatPriority": "",
-    "Image": "PikeMoreauTlan"
-  }
-},
-{
-  "Name": "Swarms Secondary",
-  "info": {
-    "CrewType": "Swarm Hostiles",
-    "OfficerNames": ["Beverly Crusher", "Jaylah (not Borg)", "Kang"],
-    "CrewDescription":"Alternative Swarm hostile crew. More loot",
-    "StatPriority": "Defense",
-    "Image": "JaylahBeverlyKang"
-  }
-},
-{
-  "Name": "Swarms Tertiary",
-  "info": {
-    "CrewType": "Swarm Hostiles",
-    "OfficerNames": ["Moreau", "Pike", "Jaylah (not Borg)"],
-    "CrewDescription":"Alternative Swarm hostile crew. ",
-    "StatPriority": "",
-    "Image": "PikeMoreauJaylah"
-  }
-},
-{
-  "Name": "Swarm Armada",
-  "info": {
-    "CrewDescription": "One of the better crews for killing armadas, works very well for Normal, Swarm and Borg",
-    "CrewType": "Armadas",
-    "OfficerNames": [ "Six of Eleven", "Five of Eleven", "Khan"],
-    "StatPriority": "Health, Attack",
-    "Image": "Armada56Khan"
-  }
-},
+  {
+    "Name": "Swarms Primary",
+    "info": {
+      "CrewType": "Swarm Hostiles",
+      "OfficerNames": ["Moreau", "Pike", "Tlan"],
+      "CrewDescription":"Default swarm crew before Jaylah is available.",
+      "StatPriority": "",
+      "Image": "PikeMoreauTlan"
+    }
+  },
+  {
+    "Name": "Swarms Secondary",
+    "info": {
+      "CrewType": "Swarm Hostiles",
+      "OfficerNames": ["Beverly Crusher", "Jaylah (not Borg)", "Kang"],
+      "CrewDescription":"Alternative Swarm hostile crew. More loot",
+      "StatPriority": "Defense",
+      "Image": "JaylahBeverlyKang"
+    }
+  },
+  {
+    "Name": "Swarms Tertiary",
+    "info": {
+      "CrewType": "Swarm Hostiles",
+      "OfficerNames": ["Moreau", "Pike", "Jaylah (not Borg)"],
+      "CrewDescription":"Alternative Swarm hostile crew. ",
+      "StatPriority": "",
+      "Image": "PikeMoreauJaylah"
+    }
+  },
+  {
+    "Name": "Swarm Armada",
+    "info": {
+      "CrewDescription": "One of the better crews for killing armadas, works very well for Normal, Swarm and Borg",
+      "CrewType": "Armadas",
+      "OfficerNames": [ "Six of Eleven", "Five of Eleven", "Khan"],
+      "StatPriority": "Health, Attack",
+      "Image": "Armada56Khan"
+    }
+  },
   {
     "Name": "Para Bellum",
     "info": {
@@ -191,15 +191,105 @@
       "Image": ""
     }
   },
+
+{
+  "Name": "Discovery PVP Alternative 1",
+  "info": {
+    "CrewType": "Discovery PVP",
+    "OfficerNames": ["Marcus","Harrison","Honorguard Worf"],
+    "CrewDescription":"Probably the most consistent PVP crew for Disvovery",
+    "StatPriority": "Defense",
+    "Image": "MarcusHarrisonHonorguardWorf"
+  }
+},  
+{
+    "Name": "Discovery PVP Alternative 2",
+    "info": {
+      "CrewType": "Discovery PVP",
+      "OfficerNames": ["Marcus","Harry Fencourt Mudd","Harrison"],
+      "CrewDescription":"Probably the more powerful alternative, but not as consistent, as you rely on mudd's ability to activate.",
+      "StatPriority": "Defense",
+      "Image": "MarcusFatMuddHarrison"
+    }
+  },
+  {
+    "Name": "Discovery PVP Alternative 3",
+    "info": {
+      "CrewType": "Discovery PVP",
+      "OfficerNames": ["Marcus","Harry Fencourt Mudd","Saru"],
+      "CrewDescription":"The option if you do not have Harrison or Worf",
+      "StatPriority": "Defense",
+      "Image": "MarcusFatMuddSaru"
+    }
+  },
+  {
+    "Name": "D4 PVP Alternative 1",
+    "info": {
+      "CrewType": "D4 PVP",
+      "OfficerNames": ["Marcus","Yuki","Harrison"],
+      "CrewDescription":"Best overall crew for D4, works against almost everything",
+      "StatPriority": "vs Augur: Health, vs ent:Defense",
+      "Image": "MarcusYukiHarrison"
+    }
+  },
+  {
+    "Name": "D4 PVP Alternative 2",
+    "info": {
+      "CrewType": "D4 PVP",
+      "OfficerNames": ["Marcus","Yuki","Honorguard Worf"],
+      "CrewDescription":"Good overall crew without harrison",
+      "StatPriority": "vs Augur: Health, vs Ent: Defense",
+      "Image": "MarcusYukiHonorguardWorf"
+    }
+  },
+  {
+    "Name": "D4 PVP Alternative 3",
+    "info": {
+      "CrewType": "D4 PVP",
+      "OfficerNames": ["Kerla","Gorkon","Honorguard Worf"],
+      "CrewDescription":"Good crew vs Augurs",
+      "StatPriority": "",
+      "Image": "KerlaGorkonHonorguardWorf"
+    }
+  },
+  {
+    "Name": "Enterprise PVP Alternative 1",
+    "info": {
+      "CrewType": "Enterprise PVP", 
+      "OfficerNames": ["TOS Uhura","TOSKirk","Honorguard Worf"],
+      "CrewDescription":"Versatile, good vs morale",
+      "StatPriority": "Defense",
+      "Image": "TOSUhuraTOSKirkHonorguardWorf"
+    }
+  },
+  {
+    "Name": "Enterprise PVP Alternative 2",
+    "info": {
+      "CrewType": "Enterprise PVP",
+      "OfficerNames": ["Kirk","Gorkon","Honorguard Worf"],
+      "CrewDescription":"Versatile",
+      "StatPriority": "Defense",
+      "Image": ""
+    }
+  },
   {
     "Name": "",
     "info": {
       "CrewType": "",
-      "OfficerNames": [],
+      "OfficerNames": ["","",""],
+      "CrewDescription":"",
+      "StatPriority": "",
+      "Image": ""
+    }
+  },
+  {
+    "Name": "",
+    "info": {
+      "CrewType": "",
+      "OfficerNames": ["","",""],
       "CrewDescription":"",
       "StatPriority": "",
       "Image": ""
     }
   }
-
 ]

@@ -1,0 +1,23 @@
+
+[
+    {
+        "name":"Summoning",
+        "emoji":"1️⃣",
+        "crew":"Saru - Stamets - Culbert"
+    },
+    { 
+        "name": "PVP Alternative 1",
+        "emoji": "2️⃣",
+        "crew": "Marcus - Harry Fencourt Mudd - Honorguard Worf"
+    },
+    {
+        "name": "PVP Alternative 2",
+        "emoji":"3️⃣",
+        "crew": "Marcus - Harry Fencourt Mudd - Harrison" 
+    },
+    {
+        "name":"PVP Alternative 3",
+        "emoji":"4️⃣" ,
+        "crew": "Marcus - Harry Fencourt Mudd - Saru"   
+    }
+]

@@ -1,37 +1,36 @@
-const editFunctions = require('../../../../editFunctions.js');
-const createEmbed = require('../../../../createEmbeds.js');
+const editFunctions = require('../../../../../editFunctions.js');
+const createEmbed = require('../../../../../createEmbeds.js');
 
 function crewTypeSelection(Discord, message, command, args) { 
-    
     if(args.length > 0)
     {
         if(Array.isArray(args)) {
             input = editFunctions.ArgumentToString(args);
         }
         switch (args) {
-            case "Armada":
-                var embed = createEmbed.createOfficerEmbed("Borg Armada");
+            case "Summoning":
+                var embed = createEmbed.createOfficerEmbed("Discovery");
                 if (embed != null) {
                     return message.channel.send(embed);
                 } else {
                     return message.channel.send("Error");
                 }
-            case "Hostile Primary":
-                var embed = createEmbed.createOfficerEmbed("Borg Primary");
+            case "PVP Alternative 1":
+                var embed = createEmbed.createOfficerEmbed("Discovery PVP Alternative 1");
                 if (embed != null) {
                     return message.channel.send(embed);
                 } else {
                     return message.channel.send("Error");
                 }
-            case "Hostile Alternative 1":
-                var embed = createEmbed.createOfficerEmbed("Borg Secondary");
+            case "PVP Alternative 2":
+                var embed = createEmbed.createOfficerEmbed("Discovery PVP Alternative 2");
                 if (embed != null) {
                     return message.channel.send(embed);
                 } else {
                     return message.channel.send("Error");
                 }
-            case "Hostile level 29":
-                var embed = createEmbed.createOfficerEmbed("Borg Level 29 Hostiles");
+            case "PVP Alternative 3":
+                var embed = createEmbed.createOfficerEmbed("Discovery PVP Alternative 3");
                 if (embed != null) {
                     return message.channel.send(embed);
                 } else {

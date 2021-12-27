@@ -8,6 +8,14 @@ const armadaCategory = require('./OfficerCategories/Armadas/Armadas.json');
 const armadaReaction = require('./OfficerCategories/Armadas/armadasReaction.js');
 const swarmCategory = require('./OfficerCategories/Swarms/Swarms.json');
 const swarmReaction = require('./OfficerCategories/Swarms/swarmsReaction.js');
+const discoveryCatergory = require('./OfficerCategories/PVP/Discovery/Discovery.json')
+const discoveryReactions = require('./OfficerCategories/PVP/Discovery/DiscoveryReactions.js')
+const augurCategory =require('./OfficerCategories/PVP/Augur/Augur.json')
+const augurReaction =require('./OfficerCategories/PVP/Augur/augurReaction.js')
+const enterpriseCategory =require('./OfficerCategories/PVP/Enterprise/Enterprise.json')
+const enterpriseReaction =require('./OfficerCategories/PVP/Enterprise/enterpriseReaction')
+const d4Category =require('./OfficerCategories/PVP/D4/D4.json')
+const d4Reaction =require('./OfficerCategories/PVP/D4/d4Reaction')
 const createEmbeddedMessages = require('../../createEmbeds.js');
 
 
@@ -62,6 +70,32 @@ const createEmbeddedMessages = require('../../createEmbeds.js');
                                 (category) => category.emoji === reaction.emoji.name,
                                 );
                                 swarmReaction.crewTypeSelection(Discord, message, command,selectedCategory.name);
+                                
+                            break;
+                        case "discovery":
+                        case "disco":
+                            selectedCategory= discoveryCatergory.find(
+                                (category) => category.emoji === reaction.emoji.name,
+                                );
+                                discoveryReactions.crewTypeSelection(Discord, message,command,selectedCategory.name);
+                        case "enterprise":
+                        case "ent":
+                            selectedCategory= enterpriseCategory.find(
+                                (category) => category.emoji === reaction.emoji.name,
+                                );
+                                enterpriseReaction.crewTypeSelection(Discord, message,command,selectedCategory.name);
+                            break;
+                        case "augur":
+                            selectedCategory= augurCategory.find(
+                                (category) => category.emoji === reaction.emoji.name,
+                                );
+                                augurReaction.crewTypeSelection(Discord, message,command,selectedCategory.name);
+                        break;
+                        case "d4":
+                            selectedCategory= d4Category.find(
+                                (category) => category.emoji === reaction.emoji.name,
+                                );
+                                d4Reaction.crewTypeSelection(Discord, message,command,selectedCategory.name);
                             break;
                         default:
                             break;
@@ -99,12 +133,20 @@ const createEmbeddedMessages = require('../../createEmbeds.js');
                 case "stella":
                 case "stellas":
                     return  stellaCategory.map((cat) => cat.emoji);
+                case "disco":
+                case "discovery":
+                    return discoveryCatergory.map((cat) => cat.emoji);
                 case "armada":
                 case "armadas": 
                     return armadaCategory.map((cat) => cat.emoji);
+                case "enterprise":
+                    return enterpriseCategory.map((cat) => cat.emoji);
+                case "augur":
+                    return augurCategory.map((cat) => cat.emoji);
+                case "d4":
+                    return d4Category.map((cat) => cat.emoji);
                 default:
                     return message.channel.send("Error, please try again");
-                    break;
             }
         }
     }

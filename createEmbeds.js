@@ -3,6 +3,10 @@ const borgCategory = require('./Commands/OfficerTool/OfficerCategories/Borg/Borg
 const stellaCategory = require('./Commands/OfficerTool/OfficerCategories/Stella/Stella.json');
 const armadaCategory = require('./Commands/OfficerTool/OfficerCategories/Armadas/Armadas.json');
 const swarmCategory = require('./Commands/OfficerTool/OfficerCategories/Swarms/Swarms.json');
+const discoveryCatergory = require('./Commands/OfficerTool/OfficerCategories/PVP/Discovery/Discovery.json');
+const augurCategory =require('./Commands/OfficerTool/OfficerCategories/PVP/Augur/Augur.json')
+const enterpriseCategory =require('./Commands/OfficerTool/OfficerCategories/PVP/Enterprise/Enterprise.json')
+const d4Category =require('./Commands/OfficerTool/OfficerCategories/PVP/D4/D4.json')
 
 const editFunctions = require('./editFunctions.js');
 const getEventData = require('./getEventData');
@@ -196,6 +200,15 @@ function officerTypeReaction(eventName) {
                     }))
                 )
                 break;
+            case "disco":
+            case "discovery":
+                embed.addFields(
+                    discoveryCatergory.map((cat) => ({
+                    name:`${cat.emoji} ${cat.name}`,
+                    value:`${cat.crew}`,
+                    }))
+                )
+                break;
             case "swarm":
             case "swarms":
                 embed.addFields(
@@ -221,12 +234,37 @@ function officerTypeReaction(eventName) {
                     }))
                 )
                 break; 
+            case "enterprise":
+                embed.addFields(
+                    enterpriseCategory.map((cat) => ({
+                    name:`${cat.emoji} ${cat.name}`,
+                    value:`${cat.crew}`,
+                    }))
+                )
+                break;
+            case "augur":
+                embed.addFields(
+                    augurCategory.map((cat) => ({
+                    name:`${cat.emoji} ${cat.name}`,
+                    value:`${cat.crew}`,
+                    }))
+                )
+                break;
+            case "d4":
+                embed.addFields(
+                    d4Category.map((cat) => ({
+                    name:`${cat.emoji} ${cat.name}`,
+                    value:`${cat.crew}`,
+                    }))
+                )
+                break;
             default:
                 return "ERROR | choseCrewType SwitchCase";
         }
     return embed;
 }
 function createOfficerEmbed(purpose) {
+    
     officerData = getEventData.findOfficerData(purpose);
 
     if (officerData[0] != undefined) {  

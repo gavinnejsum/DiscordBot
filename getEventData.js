@@ -1,5 +1,6 @@
 const eventData = require('./eventData.json');
-const officerData = require('./Commands/OfficerTool/officerData.json');
+const officerData = require('./Commands/OfficerTool/OfficerDataTypes/officerData.json');
+
 
 function findEventData(eventName) {     
     foundData = eventData.filter(element => {
@@ -9,7 +10,6 @@ function findEventData(eventName) {
     });
     return foundData;
 }
-
 
 function findOfficerData(purpose) { 
     foundData = officerData.filter(element => {

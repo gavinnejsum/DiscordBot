@@ -266,30 +266,30 @@
     "Name": "Enterprise PVP Alternative 2",
     "info": {
       "CrewType": "Enterprise PVP",
-      "OfficerNames": ["Kirk","Gorkon","Honorguard Worf"],
+      "OfficerNames": ["Gorkon","Kirk","Honorguard Worf"],
       "CrewDescription":"Versatile",
       "StatPriority": "Defense",
       "Image": ""
     }
   },
   {
-    "Name": "",
+    "Name": "Augur PVP Alternative 1",
     "info": {
-      "CrewType": "",
-      "OfficerNames": ["","",""],
+      "CrewType": "Augur PVP",
+      "OfficerNames": ["TOS Uhura","TOS Kirk","Honorguard Worf"],
       "CrewDescription":"",
-      "StatPriority": "",
-      "Image": ""
+      "StatPriority": "Defense",
+      "Image": "TOSUhuraTOSKirkHonorguardWorf"
     }
   },
   {
-    "Name": "",
+    "Name": "Augur PVP Alternative 2",
     "info": {
-      "CrewType": "",
-      "OfficerNames": ["","",""],
+      "CrewType": "Augur PVP",
+      "OfficerNames": ["Marcus","Yuki","Honorguard Worf"],
       "CrewDescription":"",
-      "StatPriority": "",
-      "Image": ""
+      "StatPriority": "Defense",
+      "Image": "MarcusYukiHonorguardWorf"
     }
   }
 ]

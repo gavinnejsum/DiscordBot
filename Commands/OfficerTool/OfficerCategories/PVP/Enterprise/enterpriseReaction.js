@@ -16,7 +16,7 @@ function crewTypeSelection(Discord, message, command, args) {
                     return message.channel.send("Error");
                 }
             case "Versatile Alternative 2":
-                var embed = createEmbed.createOfficerEmbed("Discovery PVP Alternative 2");
+                var embed = createEmbed.createOfficerEmbed("Enterprise PVP Alternative 2");
                 if (embed != null) {
                     return message.channel.send(embed);
                 } else {

@@ -78,6 +78,7 @@ const createEmbeddedMessages = require('../../createEmbeds.js');
                                 (category) => category.emoji === reaction.emoji.name,
                                 );
                                 discoveryReactions.crewTypeSelection(Discord, message,command,selectedCategory.name);
+                                break;
                         case "enterprise":
                         case "ent":
                             selectedCategory= enterpriseCategory.find(

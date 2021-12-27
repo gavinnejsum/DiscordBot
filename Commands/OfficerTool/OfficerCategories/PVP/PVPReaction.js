@@ -47,11 +47,10 @@ function PVPTypeSelection(Discord, message, command, args)
                             break;
                         case "Discovery":
                             officerReaction.chooseType(Discord, message, command,"discovery")
+                            break;
                         default:
                             return message.channel.send("Error | Switch in PVPReaction.PVPTypeSelection")
                     }
-                  
-                    
                     embedMsg.delete()
                   .catch(console.error);
             });

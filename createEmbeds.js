@@ -7,6 +7,7 @@ const discoveryCatergory = require('./Commands/OfficerTool/OfficerCategories/PVP
 const augurCategory =require('./Commands/OfficerTool/OfficerCategories/PVP/Augur/Augur.json')
 const enterpriseCategory =require('./Commands/OfficerTool/OfficerCategories/PVP/Enterprise/Enterprise.json')
 const d4Category =require('./Commands/OfficerTool/OfficerCategories/PVP/D4/D4.json')
+const pvpCategory =require('./Commands/OfficerTool/OfficerCategories/PVP/PVP.json')
 
 const editFunctions = require('./editFunctions.js');
 const getEventData = require('./getEventData');
@@ -253,6 +254,14 @@ function officerTypeReaction(eventName) {
             case "d4":
                 embed.addFields(
                     d4Category.map((cat) => ({
+                    name:`${cat.emoji} ${cat.name}`,
+                    value:`${cat.crew}`,
+                    }))
+                )
+                break;
+            case "pvp":
+                embed.addFields(
+                    pvpCategory.map((cat) => ({
                     name:`${cat.emoji} ${cat.name}`,
                     value:`${cat.crew}`,
                     }))

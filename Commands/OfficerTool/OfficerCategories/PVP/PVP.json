@@ -1,0 +1,24 @@
+
+[
+    { 
+            "name": "Augur",
+            "emoji": "1️⃣",
+            "crew": "PVP Crews for Augur" 
+    },
+
+    {
+            "name": "Enterprise",
+            "emoji":"2️⃣",
+            "crew": "PVP Crews for Enterprise" 
+    },
+    {
+            "name":"D4",
+            "emoji":"3️⃣",
+            "crew": "PVP Crews for D4"
+    },
+    {
+            "name":"Discovery",
+            "emoji":"4️⃣",
+            "crew": "PVP Crews for Discovery" 
+    }
+]

@@ -1,6 +1,8 @@
 const createEmbed = require('../../createEmbeds');
 const editFunctions = require('../../editFunctions.js');
 const officerReaction = require ('./officerReaction');
+const pvpCategory = require('./OfficerCategories/PVP/PVP.json')
+const pvpReaction = require('./OfficerCategories/PVP/PVPReaction');
 
 function officerCommand(Discord, message, command, args) {
     if(args.length > 0)
@@ -23,6 +25,9 @@ function officerCommand(Discord, message, command, args) {
                 break;
             case "stella": 
                 officerReaction.chooseType(Discord, message, command, args);
+                break;
+            case "pvp":
+                pvpReaction.PVPTypeSelection(Discord,message,command,args);
                 break;
             case "ent":
             case "enterprise":
@@ -72,7 +77,7 @@ function officerCommand(Discord, message, command, args) {
                     return message.channel.send("Error");
                 }
             case "borg armada":
-            case "aramda borg":
+            case "armada borg":
                 var embed = createEmbed.createOfficerEmbed("Borg Armada");
                 if (embed != null) {
                     return message.channel.send(embed);

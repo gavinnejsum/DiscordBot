@@ -1,5 +1,5 @@
 const eventData = require('./eventData.json');
-const officerData = require('./Commands/OfficerTool/OfficerDataTypes/officerData.json');
+const officerData = require('./Commands/OfficerTool/officerData.json');
 
 
 function findEventData(eventName) {     

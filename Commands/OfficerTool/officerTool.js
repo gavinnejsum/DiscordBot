@@ -12,14 +12,17 @@ function officerCommand(Discord, message, command, args) {
         }
         switch (input) {
             case "armada":
+            case "armadas":
                 officerReaction.chooseType(Discord, message, command, args);
                 break; 
             case "borg":
+            case "borgs":
                 officerReaction.chooseType(Discord, message, command, args);
                 break;
             case "disco":
                 officerReaction.chooseType(Discord, message, command, args);
                 break;
+            case "swarm":
             case "swarms":
                 officerReaction.chooseType(Discord, message, command, args);
                 break;
@@ -84,7 +87,7 @@ function officerCommand(Discord, message, command, args) {
                 } else {
                     return message.channel.send("Error");
                 }
-            case "swarm":
+       
             case "swarm primary":
                 var embed = createEmbed.createOfficerEmbed("Swarms Primary");
                 if (embed != null) {

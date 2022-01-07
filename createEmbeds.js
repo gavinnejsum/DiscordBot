@@ -23,6 +23,7 @@ dayjs.extend(advancedFormat);
 dayjs.extend(utc);
 dayjs.extend(timezone);
 dayjs.extend(calendar)
+const { stringify } = require("querystring");
 
 //research ++
 //research slb++
@@ -192,6 +193,7 @@ function officerTypeReaction(eventName) {
     eventNameCopy= eventName[0].toUpperCase() + eventName.slice(1);
         embed.setTitle(eventNameCopy)
         embed.setDescription('React to chose what Crew type you are looking for :)')
+        eventName = eventName.toString().toLowerCase();
         switch (eventName.toString()) {
             case "borg":
                 embed.addFields(

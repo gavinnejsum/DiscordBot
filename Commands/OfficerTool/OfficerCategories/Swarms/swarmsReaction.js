@@ -16,21 +16,28 @@ function crewTypeSelection(Discord, message, command, args) {
                     return message.channel.send("Error");
                 }
             case "Hostile Primary":
-                var embed = createEmbed.createOfficerEmbed("Swarms Primary");
+                var embed = createEmbed.createOfficerEmbed("Swarms Hostile Alternative 1");
                 if (embed != null) {
                     return message.channel.send(embed);
                 } else {
                     return message.channel.send("Error");
                 }
             case "Hostile Alternative 1":
-                var embed = createEmbed.createOfficerEmbed("Swarms Secondary");
+                var embed = createEmbed.createOfficerEmbed("Swarms Hostile Alternative 2");
                 if (embed != null) {
                     return message.channel.send(embed);
                 } else {
                     return message.channel.send("Error");
                 }
             case "Hostile Alternative 2":
-                var embed = createEmbed.createOfficerEmbed("Swarms Tertiary");
+                var embed = createEmbed.createOfficerEmbed("Swarms Hostile Alternative 3");
+                if (embed != null) {
+                    return message.channel.send(embed);
+                } else {
+                    return message.channel.send("Error");
+                }
+                case "Hostile Alternative 3":
+                var embed = createEmbed.createOfficerEmbed("Swarms Hostile Alternative 4");
                 if (embed != null) {
                     return message.channel.send(embed);
                 } else {

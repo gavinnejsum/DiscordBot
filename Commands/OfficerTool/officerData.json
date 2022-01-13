@@ -82,7 +82,7 @@
   },
 
   {
-    "Name": "Swarms Primary",
+    "Name": "Swarms Hostile Alternative 1",
     "info": {
       "CrewType": "Swarm Hostiles",
       "OfficerNames": ["Moreau", "Pike", "Tlan"],
@@ -92,7 +92,7 @@
     }
   },
   {
-    "Name": "Swarms Secondary",
+    "Name": "Swarms Hostile Alternative 2",
     "info": {
       "CrewType": "Swarm Hostiles",
       "OfficerNames": ["Beverly Crusher", "Jaylah (not Borg)", "Kang"],
@@ -102,13 +102,23 @@
     }
   },
   {
-    "Name": "Swarms Tertiary",
+    "Name": "Swarms Hostile Alternative 3",
     "info": {
       "CrewType": "Swarm Hostiles",
       "OfficerNames": ["Moreau", "Pike", "Jaylah (not Borg)"],
       "CrewDescription":"Alternative Swarm hostile crew. ",
       "StatPriority": "",
       "Image": "PikeMoreauJaylah"
+    }
+  },
+  {
+    "Name": "Swarms Hostile Alternative 4",
+    "info": {
+      "CrewType": "Swarm Hostiles",
+      "OfficerNames": ["Kang", "Five of Eleven", "Jaylah (not Borg)"],
+      "CrewDescription":"Alternative Swarm hostile crew. ",
+      "StatPriority": "",
+      "Image": "JaylahFiveofElevenKang"
     }
   },
   {

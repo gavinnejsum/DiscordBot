@@ -23,7 +23,12 @@
                 "name":"Hostile Alternative 2",
                 "emoji":"4️⃣",
                 "crew": "Moreau - Pike - Jaylah" 
-            
+        },
+        {
+                "name":"Hostile Alternative 3",
+                "emoji":"5️⃣",
+                "crew":"Jaylah - Five of Eleven - Kang"
+
         }
     ]
     

@@ -96,7 +96,29 @@ function createMultipleNextEventEmbed(event) {
     );
     return embed;
 }
-function createHelpEmbed() {
+function createOfficerHelpEmbed() {
+    const embed = new Discord.MessageEmbed()
+    embed.setTitle('Commands')
+    embed.attachFiles(['./Images/Elephant.png'])
+    embed.setColor(0x850c0c)
+    embed.setDescription(`All the available commands to date`)
+    embed.setFooter('Bot ', 'attachment://Elephant.png')
+    embed.setTimestamp()
+    embed.addFields(
+        {
+             name:'Officer Commands', value:`All commands prefixed by \`!officer or !o\` \n\`\`\`yaml\n` +
+                 "Just write the prefix `!officer or !o` and then the ship or type of crew you are looking after\n\n" +
+                 "For now there are only crews for pvp with epic ships and pve crews for normal, stella, swarm and borgs"+
+                 "Example: \n" +
+                 "!o Stella: Shows you the main crews for stella for different types of situations.\n\n"+
+                 "!o pvp: Shows the available pvp crews for main 3* ships." +
+                  `\`\`\``
+
+        },
+    );
+    return embed;
+}
+function createEventHelpEmbed() {
     const embed = new Discord.MessageEmbed()
     embed.setTitle('Commands')
     embed.attachFiles(['./Images/Elephant.png'])
@@ -114,7 +136,6 @@ function createHelpEmbed() {
                 "in: Will show an entire days event schedule in a specified amount of days.\n\n" +
                 "name: Lists all the current names for the events.\n\n" +
 
-
                 "Examples:\n" +
                 "!event next officer heroic : Will show when the next officer recruit event will occur.\n\n" +
                 "!event today : Lists all event for today.\n\n" +
@@ -124,7 +145,6 @@ function createHelpEmbed() {
                 "!event name: Lists all the current names for the events." +
                 `\`\`\``,
         },
-        // {name: 'Misc Commands', value: "Test\n"+"```yaml\ntest: ddd\n```" } 
     );
     return embed;
 }
@@ -308,7 +328,8 @@ module.exports = {
     createSingleEventEmbed,
     createDayScheduleEmbed,
     createMultipleNextEventEmbed,
-    createHelpEmbed,
+    createEventHelpEmbed,
+    createOfficerHelpEmbed,
     createNamesEmbed,
     eventNameReaction,
     officerTypeReaction,

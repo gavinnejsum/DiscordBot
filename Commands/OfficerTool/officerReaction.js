@@ -21,11 +21,12 @@ const createEmbeddedMessages = require('../../createEmbeds.js');
 
 
     function chooseType(Discord, message, command, args) { 
+        args = args.toString().toLowerCase();
         var embed = createEmbeddedMessages.officerTypeReaction(args);
         if(embed!= null) { 
             message.channel.send(embed).then((embedTypeMsg) => {
                 // send reactions for each getOfficerCategories
-                 getOfficerCategories = getOfficerCategory(args.toString());
+                getOfficerCategories = getOfficerCategory(args.toString());
                 getOfficerCategories.forEach((emoji) => embedTypeMsg.react(emoji));
                 // the filter checks if the reaction emoji is in the categories
                 // it also checks if the person who reacted shares the same id

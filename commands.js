@@ -19,7 +19,8 @@ module.exports = {
             case 'help':
             case 'commands':
             case '?':
-                message.channel.send(createEmbeddedMessages.createHelpEmbed());
+                message.channel.send(createEmbeddedMessages.createEventHelpEmbed());
+                message.channel.send(createEmbeddedMessages.createOfficerHelpEmbed());
                 break;
             case 'cake':
                 commandCake(Discord, message, command, args)

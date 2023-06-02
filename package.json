@@ -4,7 +4,8 @@
   "description": "Discord bot for STFC for fun",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index.js"
   },
   "author": "Gavin",
   "license": "ISC",
@@ -14,5 +15,12 @@
     "discord.js": "12.4.1",
     "dotenv": "^8.2.0",
     "rfdc": "^1.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.8.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "prettier": "^2.5.1"
   }
 }

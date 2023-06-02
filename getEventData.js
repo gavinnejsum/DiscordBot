@@ -1,26 +1,31 @@
 const eventData = require('./eventData.json');
 const officerData = require('./Commands/OfficerTool/officerData.json');
 
-
 function findEventData(eventName) {     
-    foundData = eventData.filter(element => {
-        if(element.EventName == eventName) {
-            return element;
-        }
-    });
-    return foundData;
+  const foundData = eventData.filter(element => {
+    if (element.EventName === eventName) {
+      return element;
+    }
+
+    return null;
+  });
+
+  return foundData;
 }
 
 function findOfficerData(purpose) { 
-    foundData = officerData.filter(element => {
-        if(element.Name == purpose) {
-            return element;
-        }
-    });
-    return foundData;
+  const foundData = officerData.filter(element => {
+    if (element.Name === purpose) {
+      return element;
+    }
+
+    return null;
+  });
+
+  return foundData;
 }
 
 module.exports =  {
-    findEventData,
-    findOfficerData
+  findEventData,
+  findOfficerData
 }

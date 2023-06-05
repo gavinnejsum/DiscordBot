@@ -151,7 +151,7 @@ function getEventsEntireDay(currDay) {
   } else {
     currEventDay = dayDifference;
   }
-    
+
   const foundData = eventData.filter(element => {
     if (element.day === currEventDay) {
       return element;
